@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Agendar Evento</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images\Icone.png">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    </head>
+    <body id="index">
+        <!-- Barra Lataral/Menu -->
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+            <img src="images\pfpf.jpeg" alt="Foto de Perfil" width="170" height="170" class="avatar">
+            <h3 class="w3-padding-64 w3-center"><b>Funcionário</b></h3>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">AGENDAR EVENTO</a> 
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
+        </nav>
+        <!-- Small Menu -->
+        <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding">Funcionário</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+        </header>
+        <!-- Small Menu Efeito -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>     
+
+        <div class="w3-main" style="margin-left:300px">
+            <div class="form-container">
+                <h2 class="text-center mb-4" style="color:#FFFFFF">Evento</h2>
+                <!-- Formulario -->
+                <form>
+                    <div class="row">
+                        <!-- Coluna Esquerda-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="agdSolicitante">Nome do Solicitante</label>
+                                <input type="text" class="form-control" name="agdSolicitante" id="agdSolicitante" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="evento">Título do Evento</label>
+                                <input type="text" class="form-control" id="evento" placeholder="" required>
+                            </div>  
+                            <div class="form-group">
+                                <label for="dtinicio">Data de Início</label>
+                                <input type="date" id="dtinicio" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dtfim">Data de Término</label>
+                                <input type="date" id="dtfim" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="publico">Público Alvo</label>
+                                <select name="publico" id="publico" required>
+                                    <option style="display:none"></option>
+                                    <option value="geral">Acadêmicos de Todos os Cursos</option>
+                                    <option value="docentes">Docentes</option>
+                                    <option value="administrativo">Técnico Administrativo</option>
+                                    <option value="externo">Comunidade Externa</option>
+                                    <option value="restrito">Acadêmicos do Curso Solicitate</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="complemento">Complemento Público Alvo</label>
+                                <input type="text" class="form-control" id="complemento" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vinculo">Projeto, Programa ou Setor que este Evento está Vinculado</label>
+                                <select name="vinculo" id="vinculo" required>
+                                    <option style="display:none"></option>
+                                    <option value="xxxxxx">Coordenação de Extensão e Ação Social</option>
+                                    <option value="yyyyyyy">PAD - Programa de Apoio aos Docentes</option>
+                                    <option value="yyyyyyy">CPA - Comissão Própria de Avaliação</option>
+                                    <option value="yyyyyyy">CEAD - Coordenação de Educação a Distância</option>
+                                    <option value="yyyyyyy">CIPA - Comissão Interna de Prevenção de Acidentes</option>
+                                    <option value="yyyyyyy">Departamento Pessoal UniSales</option>
+                                    <option value="yyyyyyy">Pastoral Universitári</option>
+                                    <option value="yyyyyyy">Núcleo de Inovação e Aprendizagm</option>
+                                    <option value="yyyyyyy">Coordenação de Pós-Graduação</option>
+                                    <option value="yyyyyyy">Coordenação do Curso Solicitante</option>
+                                    <option value="yyyyyyy">Inovação e Empreendedorismo</option>
+                                    <option value="yyyyyyy">Iniciação Científica</option>
+                                    <option value="yyyyyyy">Núcleo de Estágio e Carreiras</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="folder">Folder</label>
+                                <select name="vinculo" id="vinculo" required>
+                                    <option style="display:none"></option>
+                                    <option value="virtual">Virtual</option>
+                                    <option value="fisico">Físico</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="foto">Foto(s) do(s) palestrantes(s)</label>
+                                <input type="file" class="form-control" id="foto" placeholder="" accept="image/*, .pdf" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cronograma">Programação/Cronograma</label>
+                                <input type="file" class="form-control" id="cronograma" placeholder="" accept="image/*, .docx, .xlsx, .pptx, .pdf, video/*" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="divulga">Outros locais de divulgação</label>
+                                <input type="text" class="form-control" id="divulga" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descricao">Palestrantes, minicurrículo e descrição</label>
+                                <textarea class="form-control" id="descricao" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <!-- Coluna Direita-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" class="form-group" id="telefone" placeholder="(12)345678912" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="curso">Curso</label>
+                                <select name="curso" id="curso" required>
+                                    <option style="display:none"></option>
+                                    <option value="administracao">Administração</option>
+                                    <option value="arquitetura">Arquitetura e Urbanismo</option>
+                                    <option value="biomedicina">Biomedicina</option>
+                                    <option value="biologicas">Ciências Biológicas</option>
+                                    <option value="contabeis">Ciências Contábeis</option>
+                                    <option value="direito">Direito</option>
+                                    <option value="edfisica">Educação Física</option>
+                                    <option value="enfermagem">Enfermagem</option>
+                                    <option value="engcivil">Engenharia Civil</option>
+                                    <option value="engproducao">Engenharia de Produção</option>
+                                    <option value="engsoftware">Engenharia de Software</option>
+                                    <option value="farmacia">Farmácia</option>
+                                    <option value="filosofia">Filosofia</option>
+                                    <option value="fisioterapia">Fisioterapia</option>
+                                    <option value="nutricao">Nutrição</option>
+                                    <option value="psicologia">Psicologia</option>
+                                    <option value="si">Sistemas de Informação</option>
+                                    <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="local">Horário de Início</label>
+                                <input type="time" class="form-control" id="local" placeholder="" required>
+                                
+                            </div>  
+                            <div class="form-group">
+                                <label for="local">Horário de Término</label>
+                                <input type="time" class="form-control" id="local" placeholder="" required>
+                                
+                            </div>  
+                            <div class="form-group">
+                                <label for="modalidade">Modalidade</label>
+                                <select name="modalidade" id="modalidade" required>
+                                    <option style="display:none"></option>
+                                    <option value="presencial">Presencial</option>
+                                    <option value="semipresencial">Online</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="local">Local</label>
+                                <input type="text" class="form-control" id="local" placeholder="" required>
+                                <p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>
+                            </div>  
+                            <div class="form-group">
+                                <label for="recursos">Recursos</label>
+                                <div class="selectBox" onclick="showCheckboxes()">
+                                    <select>
+                                    <option>Se Presencial, precisará de quais Recursos?</option>
+                                    </select>
+                                    <div class="overSelect"></div>
+                                </div>
+                                <div id="checkboxes">
+                                    <label for="agua">
+                                    <input type="checkbox" id="agua"/>Água</label>
+                                    <label for="microfone">
+                                    <input type="checkbox" id="microfone"/>Microfone</label>
+                                    <label for="datashow">
+                                    <input type="checkbox" id="datashow"/>Datashow</label>
+                                    <label for="computador">
+                                    <input type="checkbox" id="computador"/>Computador</label>
+                                    <label for="som">
+                                    <input type="checkbox" id="som"/>Caixa de Som</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hora">Carga Horária ACC</label>
+                                <input type="text" class="form-control" id="hora" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inscritos">Limite de Inscrições</label>
+                                <input type="number" class="form-control" id="inscritos" placeholder="" min="1" max="100" required>
+                                <p><sup>Verificar a Capacidade da Sala Reservada</sup></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="valor">Valor da Inscrição</label>
+                                <input type="number" class="form-control" id="valor" placeholder="" min="0" max="100" required>
+                                <p><sup>0 caso gratuita</sup></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="objetivo">Objetivo do Evento</label>
+                                <textarea class="form-control" id="objetivo" rows="5" required></textarea>
+                            </div>
+                            
+                        </div>
+                        <button type="submit" class="btn btn-block btn-form"><b>Agendar</b></button>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+        <script src="scripts/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cadastro Projeto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images\Icone.png">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Raleway'>
+    </head>
+    <body id="index">
+        <!-- Barra Lataral/Menu -->
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+            <img src="images\pfp.jpeg" alt="Foto de Perfil" width="170" height="170" class="avatar">
+            <h3 class="w3-padding-64 w3-center"><b>Marcia</b></h3>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">INSCREVER PROJETOS</a> 
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PROJETOS</a> 
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
+        </nav>
+        <!-- Small Menu -->
+        <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding">Marcia</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+        </header>
+        <!-- Small Menu Efeito -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <div class="w3-main" style="margin-left:300px">
+            <div class="form-container">
+                <h2 class="text-center mb-4" style="color:#FFFFFF">Projeto Integrador</h2>
+                <!-- Formulario -->
+                <form>
+                    <div class="row">
+                        <!-- Coluna Esquerda-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cadCurso">Curso</label>
+                                <select name="cadCurso" id="cadCurso" required>
+                                    <option style="display:none"></option>
+                                    <option value="administracao">Administração</option>
+                                    <option value="arquitetura">Arquitetura e Urbanismo</option>
+                                    <option value="biomedicina">Biomedicina</option>
+                                    <option value="biologicas">Ciências Biológicas</option>
+                                    <option value="contabeis">Ciências Contábeis</option>
+                                    <option value="direito">Direito</option>
+                                    <option value="edFisicaB">Educação Física Bacharelado</option>
+                                    <option value="edFisicaL">Educação Física Licenciatura</option>
+                                    <option value="enfermagem">Enfermagem</option>
+                                    <option value="engCivil">Engenharia Civil</option>
+                                    <option value="engProducao">Engenharia de Produção</option>
+                                    <option value="engSoftware">Engenharia de Software</option>
+                                    <option value="farmacia">Farmácia</option>
+                                    <option value="filosofia">Filosofia</option>
+                                    <option value="fisioterapia">Fisioterapia</option>
+                                    <option value="nutricao">Nutrição</option>
+                                    <option value="psicologia">Psicologia</option>
+                                    <option value="si">Sistemas de Informação</option>
+                                    <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadGrupo">Componentes do Grupo (Nome Completo)</label>
+                                <textarea class="form-control" name="cadGrupo" id="cadGrupo" rows="3" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadProj">Título do Projeto</label>
+                                <input type="text" class="form-control" name="cadProj" id="cadProj" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadTema">Tema Norteador</label>
+                                <input type="text" class="form-control" name="cadTema" id="cadTema" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadOds">Objetivos do Desenvolvimento Sustentável (ODS) Abordado pelo PIE</label>
+                                <select name="cadOds" id="cadOds" required>
+                                    <option style="display:none"></option>
+                                    <option value="ods1">ODS 1 - Erradicação da Pobreza</option>
+                                    <option value="ods2">ODS 2 - Fome Zero e Agricultura Sustentável</option>
+                                    <option value="ods3">ODS 3 - Saúde e Bem-estar</option>
+                                    <option value="ods4">ODS 4 - Educação de Qualidade</option>
+                                    <option value="ods5">ODS 5 - Igualdade de Gênero</option>
+                                    <option value="ods6">ODS 6 - Água Potável e Saneamento</option>
+                                    <option value="ods7">ODS 7 - Energia Limpa e Acessível</option>
+                                    <option value="ods8">ODS 8 - Trabalho Decente e Crescimento Econômico</option>
+                                    <option value="ods9">ODS 9 - Indústria, Inovação e Infraestrutura</option>
+                                    <option value="ods10">ODS 10 - Redução das Desigualdades</option>
+                                    <option value="ods11">ODS 11 - Cidades e Comunidades Sustentáveis</option>
+                                    <option value="ods12">ODS 12 - Consumo e Produção Responsáveis</option>
+                                    <option value="ods13">ODS 13 - Ação Contra a Mudança Global do Clima</option>
+                                    <option value="ods14">ODS 14 - Vida na Água</option>
+                                    <option value="ods15">ODS 15 - Vida Terrestre</option>
+                                    <option value="ods16">ODS 16 - Paz, Justiça e Instituições Eficazes</option>
+                                    <option value="ods17">ODS 17 - Parcerias e Meios de Implementação</option>
+                                    <option value="nulo">Não Contempla Nenhum ODS</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadJustifica">Justificar a sua Importância da Abordagem a tal ODS e a Forma que será Contemplada no PIE</label>
+                                <textarea class="form-control" name="cadJustifica" id="cadJustifica" rows="3" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadIntro">Introdução (Apresentação, fundamentação teória, no último parágrafo descrever o objetivo do trabalho)</label>
+                                <textarea class="form-control" name="cadIntro" id="cadIntro" rows="5" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadSolucao">Descrição da Solução (Escopo da Solução Proposta, Descrevendo as Etapas, Objetivos e Justificativa)</label>
+                                <textarea class="form-control" name="cadSolucao" id="cadSolucao" rows="5" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadCronograma">Cronograma (Data e Atividade)</label>
+                                <textarea class="form-control" name="cadCronograma" id="cadCronograma" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cadRef">Referências</label>
+                                <textarea class="form-control" name="cadRef" id="cadRef" rows="5" required></textarea>
+                            </div>
+                        </div>
+
+
+                        <!-- Coluna Direita-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cadModalidade">Modalidade/Turno</label>
+                                <select name="cadModalidade" id="cadModalidade" required>
+                                    <option style="display:none"></option>
+                                    <option value="presencialmat">Presencial / Matutino</option>
+                                    <option value="presencialnot">Presencial / Noturno</option>
+                                    <option value="semipresencial">Semipresencial</option>
+                                    <option value="ead">EAD</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cadPeriodo">Período</label>
+                                <select name="cadPeriodo" id="cadPeriodo" required>
+                                    <option style="display:none"></option>
+                                    <option value="1">1º Período</option>
+                                    <option value="2">2º Período</option>
+                                    <option value="3">3º Período</option>
+                                    <option value="4">4º Período</option>
+                                    <option value="5">5º Período</option>
+                                    <option value="6">6º Período</option>
+                                    <option value="7">7º Período</option>
+                                    <option value="8">8º Período</option>
+                                    <option value="9">9º Período</option>
+                                    <option value="10">10º Período</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadAno">Ano/Semestre</label>
+                                <input type="text" class="form-control" name="cadAno" id="cadAno" placeholder="" required>
+                                <p><sup>Ex.: 2023/1</sup></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadProfessor">Professor</label>
+                                <input type="text" class="form-control" name="cadProfessor" id="cadProfessor" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadCategoria">Categoria do Projeto Integrador</label>
+                                <select name="cadCategoria" id="cadCategoria" required>
+                                    <option style="display:none"></option>
+                                    <option value="">Projeto de Empreendedorismo ou Inovação Tecnológica</option>
+                                    <option value="">Projeto de Pesquisa Integrada à Extensão</option>
+                                    <option value="">Projeto Integrador de Extensão e Comunidade</option>
+                                    <option value="">Projeto Integrador de Extensão e Mercado</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadMentor">O seu Projeto terá um Mentor? Se sim, Citar quem será o Mentor</label>
+                                <input type="text" class="form-control" name="cadMentor" id="cadMentor" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadParceiro">Instituição Parceira (Local onde será Desenvolvido o PIE, demais Instituições Parceiras)</label>
+                                <input type="text" class="form-control" name="cadParceiro" id="cadParceiro" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadImpacto">Quantas Pessoas o seu Projeto Pretende Impacta (População que Participará Diretamente do Projeto)?</label>
+                                <input type="text" class="form-control" name="cadImpacto" id="cadImpacto" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadDemanda">Descrição da Demanda (Descrição do Problema que seu Projeto visa Solucionar)</label>
+                                <textarea class="form-control" name="cadDemanda" id="cadDemanda" rows="5" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadResultado">Métricas e Resultados Esperados (Formas de Avaliar os Resultados/Impactos do Projeto)</label>
+                                <textarea class="form-control" name="cadResultado" id="cadResultado" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-form"><b>Enviar</b></button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        
+        <script src="scripts/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
+    </body>
+</html>

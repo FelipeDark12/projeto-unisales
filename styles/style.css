@@ -1,0 +1,167 @@
+body{
+  background-color: #204f9c;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: "Raleway", sans-serif;
+}  
+
+#login {
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+#index {
+  background-color: #204f9c;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-login {
+  background-color: #C0C0C0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+  margin-top: 50px;
+  padding: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-container {
+  background-color: #204f9c;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+  margin-top: 50px;
+  padding: 30px;
+  font-family: "Raleway", sans-serif;
+  color:#FFFFFF;
+  font-weight: bold;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn-submit {
+  background-color: #204f9c;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #0c4494;
+  transform: translateY(-3px);
+}
+
+.btn-form {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.5s ease-in-out;
+}
+.btn-form:hover {
+  background-color: #C0C0C0;
+  transform: translateY(-3px);
+}
+
+.sidebar {
+  background-color: #C0C0C0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+}
+
+img.avatar {
+    
+  border-radius: 50%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+a.link {
+  color: #204f9c;
+}
+
+.multiselect {
+  width: 200px;
+}
+  
+.selectBox {
+  position: relative;
+}
+  
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+  
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+  
+#checkboxes {
+  display: none;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+  color: black;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+  
+#checkboxes label {
+  display: block;
+}
+  
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
