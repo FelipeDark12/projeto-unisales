@@ -13,9 +13,10 @@
 </head>
 
 <body id="login">
+    <!--
     <a href="cadProj.html">Cadastro projeto</a><br>
     <a href="agdEvt.html">Agendar evento</a>
-
+    -->
     <div class="container">
         <div class="row justify-content-center">
             <img src="images\Logo-Blue.png" style="width:25%" alt="Logo">
@@ -23,10 +24,10 @@
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-lg-5">
                 <div class="form-login">
                     <form>
-                        <h2 class="text-center mb-4">LOGIN</h2>
+                        <h2 class="text-center mb-2"><b>LOGIN</b></h2>
                         <div class="form-group">
                             <label for="user">Usuário</label>
                             <input type="text" class="form-control" id="user" placeholder="Insira RA" required>
@@ -34,6 +35,7 @@
                         <div class="form-group">
                             <label for="password">Senha</label>
                             <input type="password" class="form-control" id="password" placeholder="Insira senha" required>
+                            <input type="checkbox" onclick="myFunction()"> Mostrar Senha
                         </div>
                         <button type="submit" class="btn btn-block btn-submit">Entrar</button><br>
                         <span class="">Dificuldades no acesso?</span><br>
