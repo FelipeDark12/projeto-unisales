@@ -1,10 +1,10 @@
 body{
   background-color: #204f9c;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway';
 }
 
 h1,h2,h3,h4,h5{
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway';
 }  
 
 #login {
@@ -12,29 +12,32 @@ h1,h2,h3,h4,h5{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  font-weight: bold;
 }
 
 #index {
   background-color: #204f9c;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway';
+  font-weight: bold;
 }
 
 .form-login {
   background-color: #C0C0C0;
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 30px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway';
+  font-weight: bold;
 }
 
 .form-container {
   background-color: #204f9c;
   border-radius: 10px;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 30px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway';
   color:#FFFFFF;
   font-weight: bold;
 }
@@ -82,14 +85,26 @@ h1,h2,h3,h4,h5{
 }
 
 img.avatar {
-    
   border-radius: 50%;
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
 }
 
 input[type=text], select {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 10px 20px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 0px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -98,8 +113,8 @@ input[type=text], select {
 
 input[type=tel], select {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 10px 20px;
+  margin: 0px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -108,8 +123,8 @@ input[type=tel], select {
 
 input[type=date], select {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 10px 20px;
+  margin: 0px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -118,8 +133,8 @@ input[type=date], select {
 
 input[type=number], select {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 10px 20px;
+  margin: 0px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -164,4 +179,11 @@ a.link {
   
 #checkboxes label:hover {
   background-color: #1e90ff;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

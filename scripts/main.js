@@ -1,3 +1,4 @@
+// Script checkbox
 var expanded = false;
 
 function showCheckboxes() {
@@ -20,4 +21,14 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
+}
+
+//Script to password
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
 }
