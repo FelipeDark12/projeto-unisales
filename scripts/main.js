@@ -32,3 +32,8 @@ function myFunction() {
     x.type = "password";
   }
 }
+
+//modal
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})

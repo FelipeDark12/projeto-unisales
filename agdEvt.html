@@ -8,6 +8,7 @@
         <link rel="icon" href="images\Icone.png">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     </head>
@@ -30,7 +31,7 @@
         <div class="w3-main" style="margin-left:300px">
             <div class="form-container">
                 <img src="images\Logo.png" class="center" style="width:20%" alt="Logo">
-                <h2 class="text-center mb-4" style="color:#FFFFFF">Evento</h2>
+                <h2 class="text-center mb-4" style="color:#FFFFFF"><b>Evento</b></h2>
                 <!-- Formulario -->
                 <form>
                     <div class="row">
@@ -40,21 +41,25 @@
                                 <label for="agdSolicitante">Nome do Solicitante</label>
                                 <input type="text" class="form-control" name="agdSolicitante" id="agdSolicitante" placeholder="" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="evento">Título do Evento</label>
-                                <input type="text" class="form-control" id="evento" placeholder="" required>
+                                <label for="agdEvento">Título do Evento</label>
+                                <input type="text" class="form-control" name="agdEvento" id="agdEvento" placeholder="" required>
                             </div>  
+
                             <div class="form-group">
-                                <label for="dtinicio">Data de Início</label>
-                                <input type="date" id="dtinicio" required>
+                                <label for="agd_dtInicio">Data de Início</label>
+                                <input type="date" name="agd_dtInicio" id="agd_dtInicio" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="dtfim">Data de Término</label>
-                                <input type="date" id="dtfim" required>
+                                <label for="agd_dtFim">Data de Término</label>
+                                <input type="date" name="agd_dtFim" id="agd_dtFim" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="publico">Público Alvo</label>
-                                <select name="publico" id="publico" required>
+                                <label for="agdPublico">Público Alvo</label>
+                                <select name="agdPublico" id="agdPublico" required>
                                     <option style="display:none"></option>
                                     <option value="geral">Acadêmicos de Todos os Cursos</option>
                                     <option value="docentes">Docentes</option>
@@ -63,13 +68,15 @@
                                     <option value="restrito">Acadêmicos do Curso Solicitate</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
-                                <label for="complemento">Complemento Público Alvo</label>
-                                <input type="text" class="form-control" id="complemento" placeholder="" required>
+                                <label for="agdComplemento">Complemento Público Alvo</label>
+                                <input type="text" class="form-control" name="agdComplemento" id="agdComplemento" placeholder="Caso Precise Complementar o Público Alvo">
                             </div>
+
                             <div class="form-group">
-                                <label for="vinculo">Projeto, Programa ou Setor que este Evento está Vinculado</label>
-                                <select name="vinculo" id="vinculo" required>
+                                <label for="agdVinculo">Projeto, Programa ou Setor que este Evento está Vinculado</label>
+                                <select name="agdVinculo" id="agdVinculo" required>
                                     <option style="display:none"></option>
                                     <option value="xxxxxx">Coordenação de Extensão e Ação Social</option>
                                     <option value="yyyyyyy">PAD - Programa de Apoio aos Docentes</option>
@@ -88,39 +95,46 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="folder">Folder</label>
-                                <select name="vinculo" id="vinculo" required>
+                                <label for="agdFolder">Folder</label>
+                                <select name="agdFolder" id="agdFolder" required>
                                     <option style="display:none"></option>
                                     <option value="virtual">Virtual</option>
                                     <option value="fisico">Físico</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
-                                <label for="foto">Foto(s) do(s) palestrantes(s)</label>
-                                <input type="file" class="form-control" id="foto" placeholder="" accept="image/*, .pdf" required>
+                                <label for="agdFoto">Foto(s) do(s) palestrantes(s)</label>
+                                <input type="file" class="form-control" name="agdFoto" id="agdFoto" placeholder="" accept="image/*, .pdf" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="cronograma">Programação/Cronograma</label>
-                                <input type="file" class="form-control" id="cronograma" placeholder="" accept="image/*, .docx, .xlsx, .pptx, .pdf, video/*" required>
+                                <label for="agdCronograma">Programação/Cronograma</label>
+                                <input type="file" class="form-control" name="agdCronograma" id="agdCronograma" placeholder="" accept="image/*, .docx, .xlsx, .pptx, .pdf, video/*" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="divulga">Outros locais de divulgação</label>
-                                <input type="text" class="form-control" id="divulga" placeholder="" required>
+                                <label for="agdDivulga">Outros locais de divulgação</label>
+                                <input type="text" class="form-control" name="agdDivulga" id="agdDivulga" placeholder="">
                             </div>
+
                             <div class="form-group">
-                                <label for="descricao">Palestrantes, minicurrículo e descrição</label>
-                                <textarea class="form-control" id="descricao" rows="5" required></textarea>
+                                <label for="agdDescricao">Palestrantes, minicurrículo e descrição</label>
+                                <textarea class="form-control" name="agdDescricao" id="agdDescricao" rows="5" required></textarea>
                             </div>
                         </div>
+
+
                         <!-- Coluna Direita-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="text" class="form-group" id="telefone" placeholder="(12)345678912" required>
+                                <label for="agdTelefone">Telefone</label>
+                                <input type="tel" class="form-group" name="agdTelefone" id="agdTelefone" placeholder="(12)345678912" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="curso">Curso</label>
-                                <select name="curso" id="curso" required>
+                                <label for="agdCurso">Curso</label>
+                                <select name="agdCurso" id="agdCurso" required>
                                     <option style="display:none"></option>
                                     <option value="administracao">Administração</option>
                                     <option value="arquitetura">Arquitetura e Urbanismo</option>
@@ -144,30 +158,33 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="local">Horário de Início</label>
-                                <input type="time" class="form-control" id="local" placeholder="" required>
+                                <label for="agd_hInicio">Horário de Início</label>
+                                <input type="time" class="form-control" name="agd_hInicio" id="agd_hInicio" placeholder="" required>
                                 
                             </div>  
+
                             <div class="form-group">
-                                <label for="local">Horário de Término</label>
-                                <input type="time" class="form-control" id="local" placeholder="" required>
-                                
+                                <label for="agd_hFim">Horário de Término</label>
+                                <input type="time" class="form-control" name="agd_hFim" id="agd_hFim" placeholder="" required>
                             </div>  
+
                             <div class="form-group">
-                                <label for="modalidade">Modalidade</label>
-                                <select name="modalidade" id="modalidade" required>
+                                <label for="agdModalidade">Modalidade</label>
+                                <select name="agdModalidade" id="agdModalidade" required>
                                     <option style="display:none"></option>
                                     <option value="presencial">Presencial</option>
                                     <option value="semipresencial">Online</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
-                                <label for="local">Local</label>
-                                <input type="text" class="form-control" id="local" placeholder="" required>
-                                <p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>
+                                <label for="agdLocal">Local</label>
+                                <input type="text" class="form-control" name="agdLocal" id="agdLocal" placeholder="Reserva do Local é Responsabilidade do Solicitante" required>
+                                <!--<p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>-->
                             </div>  
+
                             <div class="form-group">
-                                <label for="recursos">Recursos</label>
+                                <label for="agdRecursos">Recursos</label>
                                 <div class="selectBox" onclick="showCheckboxes()">
                                     <select>
                                     <option>Se Presencial, precisará de quais Recursos?</option>
@@ -187,25 +204,28 @@
                                     <input type="checkbox" id="som"/>Caixa de Som</label>
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label for="hora">Carga Horária ACC</label>
-                                <input type="text" class="form-control" id="hora" placeholder="" required>
+                                <label for="agdAcc">Carga Horária ACC</label>
+                                <input type="text" class="form-control" name="agdAcc" id="agdAcc" placeholder="" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="inscritos">Limite de Inscrições</label>
-                                <input type="number" class="form-control" id="inscritos" placeholder="" min="1" max="100" required>
-                                <p><sup>Verificar a Capacidade da Sala Reservada</sup></p>
+                                <label for="agdLimite">Limite de Inscrições</label>
+                                <input type="number" class="form-control" name="agdLimite" id="agdLimite" placeholder="Verificar a Capacidade da Sala Reservada" min="1" max="100" required>
+                                <!--<p><sup>Verificar a Capacidade da Sala Reservada</sup></p>-->
                             </div>
+
                             <div class="form-group">
-                                <label for="valor">Valor da Inscrição</label>
-                                <input type="number" class="form-control" id="valor" placeholder="" min="0" max="100" required>
-                                <p><sup>0 caso gratuita</sup></p>
+                                <label for="agdValor">Valor da Inscrição</label>
+                                <input type="number" class="form-control" name="agdValor" id="agdValor" placeholder="0 Caso Gratuita" min="0" max="100" required>
+                                <!--<p><sup>0 Caso Gratuita</sup></p>-->
                             </div>
+
                             <div class="form-group">
-                                <label for="objetivo">Objetivo do Evento</label>
-                                <textarea class="form-control" id="objetivo" rows="5" required></textarea>
-                            </div>
-                            
+                                <label for="agdObjetivo">Objetivo do Evento</label>
+                                <textarea class="form-control" name="agdObjetivo" id="agdObjetivo" rows="5" required></textarea>
+                            </div>                            
                         </div>
                         <button type="submit" class="btn btn-block btn-form"><b>Agendar</b></button>
                     </div>
@@ -215,6 +235,7 @@
         </div>
         <script src="scripts/main.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
     </body>

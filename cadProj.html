@@ -8,6 +8,7 @@
         <link rel="icon" href="images\Icone.png">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Raleway'>
     </head>
@@ -17,7 +18,7 @@
             <img src="images\pfp.jpeg" alt="Foto de Perfil" width="170" height="170" class="avatar">
             <h3 class="w3-padding-64 w3-center"><b>Marcia</b></h3>
             <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">INSCREVER PROJETOS</a> 
-            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PROJETOS</a> 
+            <a href="aluno.html" onclick="w3_close()" class="w3-bar-item w3-button">PROJETOS</a> 
             <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
         </nav>
         <!-- Small Menu -->
@@ -121,11 +122,12 @@
                             <div class="form-group">
                                 <label for="cadCronograma">Cronograma</label>
                                 <textarea class="form-control" name="cadCronograma" id="cadCronograma" placeholder="Data e Atividade" rows="5" required></textarea>
-                            </div>
+                            </div>     
+                            
                             <div class="form-group">
-                                <label for="cadRef">Referências</label>
-                                <textarea class="form-control" name="cadRef" id="cadRef" rows="5" required></textarea>
-                            </div>
+                                <label for="agdFoto">Foto do Projeto</label>
+                                <input type="file" class="form-control" name="agdFoto" id="agdFoto" placeholder="" accept="image/*, .pdf" required>
+                            </div>                            
                         </div>
 
 
@@ -205,6 +207,11 @@
                                 <label for="cadResultado">Métricas e Resultados Esperados</label>
                                 <textarea class="form-control" name="cadResultado" id="cadResultado" placeholder="Formas de Avaliar os Resultados/Impactos do Projeto" rows="5" required></textarea>
                             </div>
+
+                            <div class="form-group">
+                                <label for="cadRef">Referências</label>
+                                <textarea class="form-control" name="cadRef" id="cadRef" rows="5" required></textarea>
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-block btn-form"><b>Enviar</b></button>
                     </div>
@@ -215,6 +222,7 @@
         
         <script src="scripts/main.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
     </body>
