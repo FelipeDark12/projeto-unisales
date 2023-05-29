@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Coordenador</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images\Icone.png">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Raleway'>
+    </head>
+    <body id="index">
+        <!-- Barra Lataral/Menu -->
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+            <img src="images\cdc.png" alt="Foto de Perfil" width="170" height="170" class="avatar">
+            <h3 class="w3-padding-64 w3-center"><b>Juliana</b></h3>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PROJETOS</a> 
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">EVENTO PI</a> 
+            <a href="eventosGerais.html" onclick="w3_close()" class="w3-bar-item w3-button">EVENTOS GERAIS</a> 
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
+        </nav>
+        <!-- Small Menu -->
+        <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding">Juliana</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+        </header>
+        <!-- Small Menu Efeito -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+           
+        <div class="w3-main" style="margin-left:300px">
+            <div class="form-container">
+                <img src="images\Logo.png" class="center" style="width:20%" alt="Logo">
+                <div class="table-container table-responsive">
+                    <h3 class="col-md-6">Todos os Projetos</h3>      
+
+                    <form class="pesquisa">
+                        <input  type="text" id="myinput" placeholder="Pesquisar" title="Pesquisar">
+                    </form>
+                    
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th><span id="nome" class=" table-column">Nome do Aluno <i class="caret"></i></span></th>
+                                <th><span id="periodo" class="table-column">Período <i class="caret"></i></span></th>
+                                <th><span id="modalidade" class=" table-column">Modalidade <i class="caret"></i></span></th>
+                                <th><span id="ntrabalho" class=" table-column">Nome do Trabaho <i class="caret"></i></span></th>
+                                <th><span id="curso" class=" table-column">Curso <i class="caret"></i></span></th>
+                                <th><span id="profesor" class=" table-column">Professor <i class="caret"></i></span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="mytable"></tbody>
+                    </table>
+                    
+                    <nav aria-label="Page navigation example">                        
+                        <ul class="pagination justify-content-end">                            
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">...</a></li>
+                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav> 
+                </div>
+                                
+            </div>
+            
+        </div>
+        
+    
+        
+        <script src="scripts/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            var table = document.getElementById('mytable');
+            var input = document.getElementById('myinput');
+            var tableData = [{
+                nome: 'Danyal Mullen',
+                periodo: 1,
+                modalidade: 'EAD',
+                ntrabalho: 'Trabalho',
+                curso: 'Sistemas de Informação',
+                profesor: 'Joseph Shelton'
+            }, {
+                nome: 'Constance Leonard',
+                periodo: 2,
+                modalidade: 'Noturno',
+                ntrabalho: 'Trabalho',
+                curso: 'Enfermagem',
+                profesor: 'Barnaby Moss'
+            }, {
+                nome: 'Kiera Atkins',
+                periodo: 3,
+                modalidade: 'Matutino',
+                ntrabalho: 'Trabalho',
+                curso: 'Nutrição',
+                profesor: 'Kacie Cox'
+            }, {
+                nome: 'Abraham Cummings',
+                periodo: 4,
+                modalidade: 'EAD',
+                ntrabalho: 'Trabalho',
+                curso: 'Educação Física',
+                profesor: 'Louisa Harris'
+            }];
+        var caretUpClassName = 'fa fa-caret-up';
+        var caretDownClassName = 'fa fa-caret-down';
+
+        const sort_by = (field, reverse, primer) => {
+
+            const key = primer ?
+                function(x) {
+                    return primer(x[field]);
+                } :
+                function(x) {
+                    return x[field];
+                };
+
+            reverse = !reverse ? 1 : -1;
+
+            return function(a, b) {
+                return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+            };
+        };
+
+
+        function clearArrow() {
+            let carets = document.getElementsByClassName('caret');
+            for (let caret of carets) {
+                caret.className = "caret";
+            }
+        }
+
+
+        function toggleArrow(event) {
+            let element = event.target;
+            let caret, field, reverse;
+            if (element.tagName === 'SPAN') {
+                caret = element.getElementsByClassName('caret')[0];
+                field = element.id
+            } else {
+                caret = element;
+                field = element.parentElement.id
+            }
+
+            let iconClassName = caret.className;
+            clearArrow();
+            if (iconClassName.includes(caretUpClassName)) {
+                caret.className = `caret ${caretDownClassName}`;
+                reverse = false;
+            } else {
+                reverse = true;
+                caret.className = `caret ${caretUpClassName}`;
+            }
+
+            tableData.sort(sort_by(field, reverse));
+            populateTable();
+        }
+
+
+        function populateTable() {
+            table.innerHTML = '';
+            for (let data of tableData) {
+                let row = table.insertRow(-1);
+                let nome = row.insertCell(0);
+                nome.innerHTML = data.nome;
+
+                let periodo = row.insertCell(1);
+                periodo.innerHTML = data.periodo;
+
+                let modalidade = row.insertCell(2);
+                modalidade.innerHTML = data.modalidade;
+
+                let ntrabalho = row.insertCell(3);
+                ntrabalho.innerHTML = data.ntrabalho;
+
+                let curso = row.insertCell(4);
+                curso.innerHTML = data.curso;
+
+                let profesor = row.insertCell(5);
+                profesor.innerHTML = data.profesor;
+            }
+
+            filterTable();
+        }
+
+
+        function filterTable() {
+            let filter = input.value.toUpperCase();
+            rows = table.getElementsByTagName("TR");
+            let flag = false;
+
+            for (let row of rows) {
+                let cells = row.getElementsByTagName("TD");
+                for (let cell of cells) {
+                    if (cell.textContent.toUpperCase().indexOf(filter) > -1) {
+                        if (filter) {
+                            cell.style.backgroundColor = 'yellow';
+                        } else {
+                            cell.style.backgroundColor = '';
+                        }
+
+                        flag = true;
+                    } else {
+                        cell.style.backgroundColor = '';
+                    }
+                }
+
+                if (flag) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+
+                flag = false;
+            }
+        }
+
+
+        populateTable();
+
+        let tableColumns = document.getElementsByClassName('table-column');
+
+        for (let column of tableColumns) {
+            column.addEventListener('click', function(event) {
+                toggleArrow(event);
+            });
+        }
+
+        input.addEventListener('keyup', function(event) {
+            filterTable();
+        });
+        </script>
+    </body>
+</html>
