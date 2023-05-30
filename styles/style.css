@@ -1,207 +1,234 @@
-body{
-  background-color: #204f9c;
-  font-family: 'Raleway';
+body {
+    background-color: #204f9c;
+    font-family: 'Raleway';
 }
 
-h1,h2,h3,h4,h5{
-  font-family: 'Raleway';
-}  
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Raleway';
+}
 
 #login {
-  background-image: url("/images/bg.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  font-weight: bold;
+    background-color: #204f9c;
+    font-family: 'Raleway';
+    font-weight: bold;
 }
 
 #index {
-  background-color: #204f9c;
-  font-family: 'Raleway';
-  font-weight: bold;
+    background-color: #204f9c;
+    font-family: 'Raleway';
+    font-weight: bold;
 }
 
 .form-login {
-  background-color: #C0C0C0;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-  margin-top: 20px;
-  padding: 30px;
-  font-family: 'Raleway';
-  font-weight: bold;
+    background-color: #C0C0C0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    padding: 30px;
+    font-family: 'Raleway';
+    font-weight: bold;
 }
 
 .form-container {
-  background-color: #204f9c;
-  border-radius: 10px;
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
-  margin-top: 10px;
-  padding: 30px;
-  font-family: 'Raleway';
-  color:#FFFFFF;
-  font-weight: bold;
+    background-color: #204f9c;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 30px;
+    font-family: 'Raleway';
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.table-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 30px;
+    font-family: 'Raleway';
+    color: #000000;
+    font-weight: bold;
 }
 
 .form-control:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .background {
-  background-color: #204f9c;
-  color:#FFFFFF;
+    background-color: #204f9c;
+    color: #FFFFFF;
 }
 
 .btn-submit {
-  background-color: #204f9c;
-  border: none;
-  border-radius: 20px;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: all 0.5s ease-in-out;
+    background-color: #204f9c;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
 }
 
 .btn-submit:hover {
-  background-color: #0c4494;
-  transform: translateY(-3px);
+    background-color: #0c4494;
+    transform: translateY(-3px);
 }
 
 .btn-form {
-  background-color: #ffffff;
-  border: none;
-  border-radius: 20px;
-  color: #000000;
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: all 0.5s ease-in-out;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
 }
+
 .btn-form:hover {
-  background-color: #C0C0C0;
-  transform: translateY(-3px);
+    background-color: #C0C0C0;
+    transform: translateY(-3px);
 }
 
 .sidebar {
-  background-color: #C0C0C0;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-  margin-top: 50px;
-  padding: 30px;
-  text-align: center;
+    background-color: #C0C0C0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
 }
 
 img.avatar {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 230px;
-  height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
 }
 
-input[type=text], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+input[type=text],
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type=password], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+input[type=password],
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type=tel], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: sans-serif;
+input[type=tel],
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-input[type=date], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+input[type=date],
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type=time], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: sans-serif;
+input[type=time],
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-input[type=number], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: sans-serif;
+input[type=number],
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
+
 a.link {
-  color: #204f9c;
+    color: #204f9c;
 }
 
 .multiselect {
-  width: 200px;
+    width: 200px;
 }
-  
+
 .selectBox {
-  position: relative;
+    position: relative;
 }
-  
+
 .selectBox select {
-  width: 100%;
-  font-weight: bold;
+    width: 100%;
+    font-weight: bold;
 }
-  
+
 .overSelect {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
-  
+
 #checkboxes {
-  display: none;
-  border: 1px solid #ccc;
-  background-color: #FFFFFF;
-  color: black;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    color: black;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
-  
+
 #checkboxes label {
-  display: block;
+    display: block;
 }
-  
+
 #checkboxes label:hover {
-  background-color: #1e90ff;
+    background-color: #1e90ff;
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+form.pesquisa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
