@@ -1,242 +1,347 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Agendar Evento</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="images\Icone.png">
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    </head>
-    <body id="index">
-        <!-- Barra Lataral/Menu -->
-        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-            <img src="images\pfpf.jpeg" alt="Foto de Perfil" width="170" height="170" class="avatar">
-            <h3 class="w3-padding-64 w3-center"><b>Funcionário</b></h3>
-            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">AGENDAR EVENTO</a> 
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
-        </nav>
-        <!-- Small Menu -->
-        <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-            <span class="w3-left w3-padding">Funcionário</span>
-            <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-        </header>
-        <!-- Small Menu Efeito -->
-        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>     
+<!-- Cabeçalho e imports -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agendar Evento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images\Icone.png">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/jquery.mask.min.js" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="styles/style.css">
 
-        <div class="w3-main" style="margin-left:300px">
-            <div class="form-container">
-                <img src="images\Logo.png" class="center" style="width:20%" alt="Logo">
-                <h2 class="text-center mb-4" style="color:#FFFFFF"><b>Evento</b></h2>
-                <!-- Formulario -->
-                <form>
-                    <div class="row">
-                        <!-- Coluna Esquerda-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="agdSolicitante">Nome do Solicitante</label>
-                                <input type="text" class="form-control" name="agdSolicitante" id="agdSolicitante" placeholder="" required>
-                            </div>
+    <!-- bootstrap 4
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+</head>
 
-                            <div class="form-group">
-                                <label for="agdEvento">Título do Evento</label>
-                                <input type="text" class="form-control" name="agdEvento" id="agdEvento" placeholder="" required>
-                            </div>  
+<body id="index">
+    <!-- Barra Lataral/Menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <!-- Foto de Perfil -->
+        <img src="images\pfpf.jpeg" alt="Foto de Perfil" width="170" height="170" class="avatar">
+        <!-- Nome do Funcionario-->
+        <h3 class="w3-padding-64 w3-center"><b>Funcionário</b></h3>
+        <!-- Guias de Acesso-->
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button collor">AGENDAR EVENTO</a> 
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
+    </nav>
+    <!-- Small Menu/Para telas pequenas -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <!-- Nome do Funcionario-->
+        <span class="w3-left w3-padding">Funcionário</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+    <!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>     
 
-                            <div class="form-group">
-                                <label for="agd_dtInicio">Data de Início</label>
-                                <input type="date" name="agd_dtInicio" id="agd_dtInicio" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agd_dtFim">Data de Término</label>
-                                <input type="date" name="agd_dtFim" id="agd_dtFim" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdPublico">Público Alvo</label>
-                                <select name="agdPublico" id="agdPublico" required>
-                                    <option style="display:none"></option>
-                                    <option value="geral">Acadêmicos de Todos os Cursos</option>
-                                    <option value="docentes">Docentes</option>
-                                    <option value="administrativo">Técnico Administrativo</option>
-                                    <option value="externo">Comunidade Externa</option>
-                                    <option value="restrito">Acadêmicos do Curso Solicitate</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdComplemento">Complemento Público Alvo</label>
-                                <input type="text" class="form-control" name="agdComplemento" id="agdComplemento" placeholder="Caso Precise Complementar o Público Alvo">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdVinculo">Projeto, Programa ou Setor que este Evento está Vinculado</label>
-                                <select name="agdVinculo" id="agdVinculo" required>
-                                    <option style="display:none"></option>
-                                    <option value="xxxxxx">Coordenação de Extensão e Ação Social</option>
-                                    <option value="yyyyyyy">PAD - Programa de Apoio aos Docentes</option>
-                                    <option value="yyyyyyy">CPA - Comissão Própria de Avaliação</option>
-                                    <option value="yyyyyyy">CEAD - Coordenação de Educação a Distância</option>
-                                    <option value="yyyyyyy">CIPA - Comissão Interna de Prevenção de Acidentes</option>
-                                    <option value="yyyyyyy">Departamento Pessoal UniSales</option>
-                                    <option value="yyyyyyy">Pastoral Universitári</option>
-                                    <option value="yyyyyyy">Núcleo de Inovação e Aprendizagm</option>
-                                    <option value="yyyyyyy">Coordenação de Pós-Graduação</option>
-                                    <option value="yyyyyyy">Coordenação do Curso Solicitante</option>
-                                    <option value="yyyyyyy">Inovação e Empreendedorismo</option>
-                                    <option value="yyyyyyy">Iniciação Científica</option>
-                                    <option value="yyyyyyy">Núcleo de Estágio e Carreiras</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="agdFolder">Folder</label>
-                                <select name="agdFolder" id="agdFolder" required>
-                                    <option style="display:none"></option>
-                                    <option value="virtual">Virtual</option>
-                                    <option value="fisico">Físico</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdFoto">Foto(s) do(s) palestrantes(s)</label>
-                                <input type="file" class="form-control" name="agdFoto" id="agdFoto" placeholder="" accept="image/*, .pdf" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdCronograma">Programação/Cronograma</label>
-                                <input type="file" class="form-control" name="agdCronograma" id="agdCronograma" placeholder="" accept="image/*, .docx, .xlsx, .pptx, .pdf, video/*" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdDivulga">Outros locais de divulgação</label>
-                                <input type="text" class="form-control" name="agdDivulga" id="agdDivulga" placeholder="">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdDescricao">Palestrantes, minicurrículo e descrição</label>
-                                <textarea class="form-control" name="agdDescricao" id="agdDescricao" rows="5" required></textarea>
-                            </div>
-                        </div>
-
-
-                        <!-- Coluna Direita-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="agdTelefone">Telefone</label>
-                                <input type="tel" class="form-group" name="agdTelefone" id="agdTelefone" placeholder="(12)345678912" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdCurso">Curso</label>
-                                <select name="agdCurso" id="agdCurso" required>
-                                    <option style="display:none"></option>
-                                    <option value="administracao">Administração</option>
-                                    <option value="arquitetura">Arquitetura e Urbanismo</option>
-                                    <option value="biomedicina">Biomedicina</option>
-                                    <option value="biologicas">Ciências Biológicas</option>
-                                    <option value="contabeis">Ciências Contábeis</option>
-                                    <option value="direito">Direito</option>
-                                    <option value="edfisica">Educação Física</option>
-                                    <option value="enfermagem">Enfermagem</option>
-                                    <option value="engcivil">Engenharia Civil</option>
-                                    <option value="engproducao">Engenharia de Produção</option>
-                                    <option value="engsoftware">Engenharia de Software</option>
-                                    <option value="farmacia">Farmácia</option>
-                                    <option value="filosofia">Filosofia</option>
-                                    <option value="fisioterapia">Fisioterapia</option>
-                                    <option value="nutricao">Nutrição</option>
-                                    <option value="psicologia">Psicologia</option>
-                                    <option value="si">Sistemas de Informação</option>
-                                    <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="agd_hInicio">Horário de Início</label>
-                                <input type="time" class="form-control" name="agd_hInicio" id="agd_hInicio" placeholder="" required>
-                                
-                            </div>  
-
-                            <div class="form-group">
-                                <label for="agd_hFim">Horário de Término</label>
-                                <input type="time" class="form-control" name="agd_hFim" id="agd_hFim" placeholder="" required>
-                            </div>  
-
-                            <div class="form-group">
-                                <label for="agdModalidade">Modalidade</label>
-                                <select name="agdModalidade" id="agdModalidade" required>
-                                    <option style="display:none"></option>
-                                    <option value="presencial">Presencial</option>
-                                    <option value="semipresencial">Online</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdLocal">Local</label>
-                                <input type="text" class="form-control" name="agdLocal" id="agdLocal" placeholder="Reserva do Local é Responsabilidade do Solicitante" required>
-                                <!--<p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>-->
-                            </div>  
-
-                            <div class="form-group">
-                                <label for="agdRecursos">Recursos</label>
-                                <div class="selectBox" onclick="showCheckboxes()">
-                                    <select>
-                                    <option>Se Presencial, precisará de quais Recursos?</option>
-                                    </select>
-                                    <div class="overSelect"></div>
-                                </div>
-                                <div id="checkboxes">
-                                    <label for="agua">
-                                    <input type="checkbox" id="agua"/>Água</label>
-                                    <label for="microfone">
-                                    <input type="checkbox" id="microfone"/>Microfone</label>
-                                    <label for="datashow">
-                                    <input type="checkbox" id="datashow"/>Datashow</label>
-                                    <label for="computador">
-                                    <input type="checkbox" id="computador"/>Computador</label>
-                                    <label for="som">
-                                    <input type="checkbox" id="som"/>Caixa de Som</label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdAcc">Carga Horária ACC</label>
-                                <input type="text" class="form-control" name="agdAcc" id="agdAcc" placeholder="" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdLimite">Limite de Inscrições</label>
-                                <input type="number" class="form-control" name="agdLimite" id="agdLimite" placeholder="Verificar a Capacidade da Sala Reservada" min="1" max="100" required>
-                                <!--<p><sup>Verificar a Capacidade da Sala Reservada</sup></p>-->
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdValor">Valor da Inscrição</label>
-                                <input type="number" class="form-control" name="agdValor" id="agdValor" placeholder="0 Caso Gratuita" min="0" max="100" required>
-                                <!--<p><sup>0 Caso Gratuita</sup></p>-->
-                            </div>
-
-                            <div class="form-group">
-                                <label for="agdObjetivo">Objetivo do Evento</label>
-                                <textarea class="form-control" name="agdObjetivo" id="agdObjetivo" rows="5" required></textarea>
-                            </div>                            
-                        </div>
-                        <button type="submit" class=" btn-block btn-form"><b>Agendar</b></button>
-                    </div>
-                </form>
-            </div>
+    <!-- Separarção entre menu lateral e conteudo -->
+    <div class="w3-main w3-container w3-padding-16" style="margin-left:400px; margin-right:150px;">
+        <!-- Empurre o conteúdo para baixo em telas pequenas --> 
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        <!-- Logo Unisales -->
+        <img src="images\Logo.png" class="center" style="width:30%" alt="Logo">
+        <h2 class="text-center mb-4" style="color:#FFFFFF"><b>Evento</b></h2>
+        <!-- Barra de progresso -->
+        <form class="form-container">
         
-        </div>
-        <script src="scripts/main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
-    </body>
+            <div class="accordion" id="accordionExample">
+            <div class="steps">
+                <progress id="progress" value=0 max=100 ></progress>
+                <div class="step-item">
+                    <button class="step-button text-center" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1
+                    </button>
+                    <div class="step-title">
+                        <!-- -->
+                    </div>
+                </div>
+                <div class="step-item">
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2
+                    </button>
+                    <div class="step-title">
+                        <!-- -->
+                    </div>
+                </div>                
+            </div>
+            <!-- Primeiro card da barra -->
+            <div class="card" style="background-color: transparent; border: none;">
+                <div  id="headingOne">
+                </div>
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="agdSolicitante">Nome do Solicitante</label>
+                                    <input type="text" class="form-control" name="agdSolicitante" id="agdSolicitante" placeholder="" required>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="agdTelefone">Telefone</label>
+                                    <input type="tel" class="form-control phone_with_ddd" name="agdTelefone" id="agdTelefone"  required>                    
+                                </div>
+                                
+                                <div class="col-md-5">
+                                    <label for="cadCurso">Curso</label>
+                                    <select class="form-control form-select" name="cadCurso" id="cadCurso" required>
+                                        <option style="display:none"></option>
+                                        <option value="administracao">Administração</option>
+                                        <option value="arquitetura">Arquitetura e Urbanismo</option>
+                                        <option value="biomedicina">Biomedicina</option>
+                                        <option value="biologicas">Ciências Biológicas</option>
+                                        <option value="contabeis">Ciências Contábeis</option>
+                                        <option value="direito">Direito</option>
+                                        <option value="edFisicaB">Educação Física Bacharelado</option>
+                                        <option value="edFisicaL">Educação Física Licenciatura</option>
+                                        <option value="enfermagem">Enfermagem</option>
+                                        <option value="engCivil">Engenharia Civil</option>
+                                        <option value="engProducao">Engenharia de Produção</option>
+                                        <option value="engSoftware">Engenharia de Software</option>
+                                        <option value="farmacia">Farmácia</option>
+                                        <option value="filosofia">Filosofia</option>
+                                        <option value="fisioterapia">Fisioterapia</option>
+                                        <option value="nutricao">Nutrição</option>
+                                        <option value="psicologia">Psicologia</option>
+                                        <option value="si">Sistemas de Informação</option>
+                                        <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>                        
+                    
+                </div>
+            </div>
+
+        <!-- Formulario -->
+        <form>
+            <div class="row">
+                <!-- Coluna Esquerda-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        </div>
+
+                    <div class="form-group">
+                        <label for="agdEvento">Título do Evento</label>
+                        <input type="text" class="form-control" name="agdEvento" id="agdEvento" placeholder="" required>
+                    </div>  
+
+                    <div class="form-group">
+                        <label for="agd_dtInicio">Data de Início</label>
+                        <input type="date" name="agd_dtInicio" id="agd_dtInicio" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agd_dtFim">Data de Término</label>
+                        <input type="date" name="agd_dtFim" id="agd_dtFim" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdPublico">Público Alvo</label>
+                        <select name="agdPublico" id="agdPublico" required>
+                            <option style="display:none"></option>
+                            <option value="geral">Acadêmicos de Todos os Cursos</option>
+                            <option value="docentes">Docentes</option>
+                            <option value="administrativo">Técnico Administrativo</option>
+                            <option value="externo">Comunidade Externa</option>
+                            <option value="restrito">Acadêmicos do Curso Solicitate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdComplemento">Complemento Público Alvo</label>
+                        <input type="text" class="form-control" name="agdComplemento" id="agdComplemento" placeholder="Caso Precise Complementar o Público Alvo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdVinculo">Projeto, Programa ou Setor que este Evento está Vinculado</label>
+                        <select name="agdVinculo" id="agdVinculo" required>
+                            <option style="display:none"></option>
+                            <option value="xxxxxx">Coordenação de Extensão e Ação Social</option>
+                            <option value="yyyyyyy">PAD - Programa de Apoio aos Docentes</option>
+                            <option value="yyyyyyy">CPA - Comissão Própria de Avaliação</option>
+                            <option value="yyyyyyy">CEAD - Coordenação de Educação a Distância</option>
+                            <option value="yyyyyyy">CIPA - Comissão Interna de Prevenção de Acidentes</option>
+                            <option value="yyyyyyy">Departamento Pessoal UniSales</option>
+                            <option value="yyyyyyy">Pastoral Universitári</option>
+                            <option value="yyyyyyy">Núcleo de Inovação e Aprendizagm</option>
+                            <option value="yyyyyyy">Coordenação de Pós-Graduação</option>
+                            <option value="yyyyyyy">Coordenação do Curso Solicitante</option>
+                            <option value="yyyyyyy">Inovação e Empreendedorismo</option>
+                            <option value="yyyyyyy">Iniciação Científica</option>
+                            <option value="yyyyyyy">Núcleo de Estágio e Carreiras</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="agdFolder">Folder</label>
+                        <select name="agdFolder" id="agdFolder" required>
+                            <option style="display:none"></option>
+                            <option value="virtual">Virtual</option>
+                            <option value="fisico">Físico</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdFoto">Foto(s) do(s) palestrantes(s)</label>
+                        <input type="file" class="form-control" name="agdFoto" id="agdFoto" placeholder="" accept="image/*, .pdf" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdCronograma">Programação/Cronograma</label>
+                        <input type="file" class="form-control" name="agdCronograma" id="agdCronograma" placeholder="" accept="image/*, .docx, .xlsx, .pptx, .pdf, video/*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdDivulga">Outros locais de divulgação</label>
+                        <input type="text" class="form-control" name="agdDivulga" id="agdDivulga" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdDescricao">Palestrantes, minicurrículo e descrição</label>
+                        <textarea class="form-control" name="agdDescricao" id="agdDescricao" rows="5" required></textarea>
+                    </div>
+                </div>
+
+
+                <!-- Coluna Direita-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdCurso">Curso</label>
+                        <select name="agdCurso" id="agdCurso" required>
+                            <option style="display:none"></option>
+                            <option value="administracao">Administração</option>
+                            <option value="arquitetura">Arquitetura e Urbanismo</option>
+                            <option value="biomedicina">Biomedicina</option>
+                            <option value="biologicas">Ciências Biológicas</option>
+                            <option value="contabeis">Ciências Contábeis</option>
+                            <option value="direito">Direito</option>
+                            <option value="edfisica">Educação Física</option>
+                            <option value="enfermagem">Enfermagem</option>
+                            <option value="engcivil">Engenharia Civil</option>
+                            <option value="engproducao">Engenharia de Produção</option>
+                            <option value="engsoftware">Engenharia de Software</option>
+                            <option value="farmacia">Farmácia</option>
+                            <option value="filosofia">Filosofia</option>
+                            <option value="fisioterapia">Fisioterapia</option>
+                            <option value="nutricao">Nutrição</option>
+                            <option value="psicologia">Psicologia</option>
+                            <option value="si">Sistemas de Informação</option>
+                            <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="agd_hInicio">Horário de Início</label>
+                        <input type="time" class="form-control" name="agd_hInicio" id="agd_hInicio" placeholder="" required>
+                        
+                    </div>  
+
+                    <div class="form-group">
+                        <label for="agd_hFim">Horário de Término</label>
+                        <input type="time" class="form-control" name="agd_hFim" id="agd_hFim" placeholder="" required>
+                    </div>  
+
+                    <div class="form-group">
+                        <label for="agdModalidade">Modalidade</label>
+                        <select name="agdModalidade" id="agdModalidade" required>
+                            <option style="display:none"></option>
+                            <option value="presencial">Presencial</option>
+                            <option value="semipresencial">Online</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdLocal">Local</label>
+                        <input type="text" class="form-control" name="agdLocal" id="agdLocal" placeholder="Reserva do Local é Responsabilidade do Solicitante" required>
+                        <!--<p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>-->
+                    </div>  
+
+                    <div class="form-group">
+                        <label for="agdRecursos">Recursos</label>
+                        <div class="selectBox" onclick="showCheckboxes()">
+                            <select>
+                            <option>Se Presencial, precisará de quais Recursos?</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes">
+                            <label for="agua">
+                            <input type="checkbox" id="agua"/>Água</label>
+                            <label for="microfone">
+                            <input type="checkbox" id="microfone"/>Microfone</label>
+                            <label for="datashow">
+                            <input type="checkbox" id="datashow"/>Datashow</label>
+                            <label for="computador">
+                            <input type="checkbox" id="computador"/>Computador</label>
+                            <label for="som">
+                            <input type="checkbox" id="som"/>Caixa de Som</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdAcc">Carga Horária ACC</label>
+                        <input type="text" class="form-control" name="agdAcc" id="agdAcc" placeholder="" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdLimite">Limite de Inscrições</label>
+                        <input type="number" class="form-control" name="agdLimite" id="agdLimite" placeholder="Verificar a Capacidade da Sala Reservada" min="1" max="100" required>
+                        <!--<p><sup>Verificar a Capacidade da Sala Reservada</sup></p>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdValor">Valor da Inscrição</label>
+                        <input type="number" class="form-control" name="agdValor" id="agdValor" placeholder="0 Caso Gratuita" min="0" max="100" required>
+                        <!--<p><sup>0 Caso Gratuita</sup></p>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agdObjetivo">Objetivo do Evento</label>
+                        <textarea class="form-control" name="agdObjetivo" id="agdObjetivo" rows="5" required></textarea>
+                    </div>                            
+                </div>
+                <button type="submit" class=" btn-block btn-form"><b>Agendar</b></button>
+            </div>
+        </form>
+    </div>
+    
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" 
+        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" 
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        
+        $('input[name="agdTelefone"]').mask('(00) 00000-0000');
+        
+    });
+    </script>
+</body>
 </html>

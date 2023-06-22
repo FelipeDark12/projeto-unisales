@@ -24,7 +24,7 @@ h5 {
 }
 
 .form-login {
-    background-color: #C0C0C0;
+    background-color: #eeeeee;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
@@ -91,18 +91,38 @@ h5 {
 }
 
 .btn-form:hover {
-    background-color: #C0C0C0;
+    background-color: #b1b1b1;
     color: #fff;
     
 }
 
-.sidebar {
-    background-color: #C0C0C0;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    margin-top: 50px;
-    padding: 30px;
-    text-align: center;
+.btn-next {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-next:hover {
+    background-color: #b1b1b1;
+    color: #fff;
+    
+}
+
+.btn-next[aria-expanded="true"] {
+    width: 60px;
+    height: 60px;
+    background-color: var(--prm-color);
+    color: #fff;
+}
+
+.collor {
+    background-color: #204f9c !important;
+    color: #fff !important;
+
 }
 
 img.avatar {
@@ -129,7 +149,7 @@ input[type=password],
 select,
 textarea {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     margin: 0px 0;
     margin-bottom: 10px !important;
     display: inline-block;
@@ -142,14 +162,13 @@ input[type=tel],
 select,
 textarea {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     margin: 0px 0;
     margin-bottom: 10px !important;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 input[type=date],
@@ -169,28 +188,26 @@ input[type=time],
 select,
 textarea {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     margin: 0px 0;
     margin-bottom: 10px !important;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 input[type=number],
 select,
 textarea {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     margin: 0px 0;
     margin-bottom: 10px !important;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 .multi{
@@ -243,7 +260,7 @@ a.link {
 }
 
 #checkboxes label:hover {
-    background-color: #1e90ff;
+    background-color: #1e69ff;
 }
 
 .center {
@@ -271,7 +288,7 @@ form.pesquisa {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    position: relative;
+    position: sticky;
 }
 
 .step-button {
@@ -303,7 +320,7 @@ form.pesquisa {
 }
 
 #progress {
-  -webkit-appearance:none;
+    -webkit-appearance:none;
     position: absolute;
     width: 95%;
     z-index: 5;

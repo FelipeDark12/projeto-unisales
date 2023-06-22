@@ -33,19 +33,24 @@
         <h3 class="w3-padding-64 w3-center"><b>Marcia</b></h3>
         <!-- Guias de Acesso-->
         <a href="aluno.html" onclick="w3_close()" class="w3-bar-item w3-button">PROJETOS</a>
-        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">INSCREVER PROJETOS</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button collor">INSCREVER PROJETOS</a>
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
     </nav>
     <!-- Small Menu/Para telas pequenas -->
     <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <!-- Nome do Aluno-->
         <span class="w3-left w3-padding">Marcia</span>
         <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </header>
-    <!-- Small Menu Efeito -->
+    <!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
     <!-- Separarção entre menu lateral e conteudo -->
-    <div class="w3-main w3-container w3-padding-16" style="margin-left:400px; margin-right:150px; margin-top: 30px;">
-        <img src="images\Logo.png" class="center" style="width:20%" alt="Logo">
+    <div class="w3-main w3-container w3-padding-16" style="margin-left:400px; margin-right:150px;">
+        <!-- Empurre o conteúdo para baixo em telas pequenas --> 
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        <!-- Logo Unisales -->
+        <img src="images\Logo.png" class="center" style="width:30%" alt="Logo">
         <h2 class="text-center mb-4" style="color:#FFFFFF"><b>Projeto Integrador de Extensão</b></h2>
         <!-- Barra de progresso -->
         <form class="form-container">
@@ -54,7 +59,7 @@
             <div class="steps">
                 <progress id="progress" value=0 max=100 ></progress>
                 <div class="step-item">
-                    <button class="step-button text-center" type="submit" data-bs-toggle="collapse"
+                    <button class="step-button text-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         1
                     </button>
@@ -63,7 +68,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="submit" data-bs-toggle="collapse"
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         2
                     </button>
@@ -72,12 +77,12 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="submit" data-bs-toggle="collapse"
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         3
                     </button>
                     <div class="step-title">
-                        Conteúdo PIE
+                        Conteúdo
                     </div>
                 </div>
             </div>
@@ -88,10 +93,10 @@
             
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
-                    <form class="row g-3 text-start form-container">
+                    
                         <fieldset class="form-group">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <label for="cadCurso">Curso</label>
                                     <select class="form-control form-select" name="cadCurso" id="cadCurso" required>
                                         <option style="display:none"></option>
@@ -126,7 +131,7 @@
                                         <option value="ead">EAD</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <label for="cadPeriodo">Período</label>
                                     <select class="form-control form-select" name="cadPeriodo" id="cadPeriodo" required>
                                         <option style="display:none"></option>
@@ -147,7 +152,7 @@
                                     <label for="cadProfessor">Professor</label>
                                     <input type="text" class="form-control" name="cadProfessor" id="cadProfessor" placeholder="" required>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <label for="cadAno">Ano/Semestre</label>
                                     <input type="text" class="form-control" name="cadAno" id="cadAno" placeholder="2023/1" required>
                                     <!-- <p><sup>Ex.: 2023/1</sup></p> -->
@@ -156,13 +161,17 @@
                                     <label for="cadGrupo">Componentes do Grupo</label>
                                     <textarea class="form-control" name="cadGrupo" id="cadGrupo" placeholder="Nome Completo de Todos os Integrantes" rows="3" required></textarea>
                                 </div>
-                                <div class="col-md-8">
-                                    
+                                <div class="col-md-4">
+                                    <button class="btn-next text-center collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                        style="margin-top: 70px;">
+                                        Próximo
+                                    </button>
                                 </div>
                                     
                             </div>
                         </fieldset>                        
-                    </form>
+                    
                 </div>
             </div>
             <!-- Segundo card da barra-->
@@ -171,72 +180,79 @@
             
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <form class="row g-3 text-start form-container">
-                        <fieldset class="form-group">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="cadProj">Título do Projeto</label>
-                                    <input type="text" class="form-control" name="cadProj" id="cadProj" placeholder="" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadTema">Tema Norteador</label>
-                                    <input type="text" class="form-control" name="cadTema" id="cadTema" placeholder="" required>
-                                </div>
-                                <div class="col-md-5">
-                                    <label for="cadCategoria">Categoria do Projeto Integrador de Extensão</label>
-                                    <select name="cadCategoria" id="cadCategoria" required>
-                                        <option style="display:none"></option>
-                                        <option value="">Projeto de Empreendedorismo ou Inovação Tecnológica</option>
-                                        <option value="">Projeto de Pesquisa Integrada à Extensão</option>
-                                        <option value="">Projeto Integrador de Extensão e Comunidade</option>
-                                        <option value="">Projeto Integrador de Extensão e Mercado</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-7">
-                                    <label for="cadOds">Objetivos do Desenvolvimento Sustentável (ODS) Abordado pelo PIE</label>
-                                    <select name="cadOds" id="cadOds" multiple required>
-                                        <option style="display:none"></option>
-                                        <option value="ods1">ODS 1 - Erradicação da Pobreza</option>
-                                        <option value="ods2">ODS 2 - Fome Zero e Agricultura Sustentável</option>
-                                        <option value="ods3">ODS 3 - Saúde e Bem-estar</option>
-                                        <option value="ods4">ODS 4 - Educação de Qualidade</option>
-                                        <option value="ods5">ODS 5 - Igualdade de Gênero</option>
-                                        <option value="ods6">ODS 6 - Água Potável e Saneamento</option>
-                                        <option value="ods7">ODS 7 - Energia Limpa e Acessível</option>
-                                        <option value="ods8">ODS 8 - Trabalho Decente e Crescimento Econômico</option>
-                                        <option value="ods9">ODS 9 - Indústria, Inovação e Infraestrutura</option>
-                                        <option value="ods10">ODS 10 - Redução das Desigualdades</option>
-                                        <option value="ods11">ODS 11 - Cidades e Comunidades Sustentáveis</option>
-                                        <option value="ods12">ODS 12 - Consumo e Produção Responsáveis</option>
-                                        <option value="ods13">ODS 13 - Ação Contra a Mudança Global do Clima</option>
-                                        <option value="ods14">ODS 14 - Vida na Água</option>
-                                        <option value="ods15">ODS 15 - Vida Terrestre</option>
-                                        <option value="ods16">ODS 16 - Paz, Justiça e Instituições Eficazes</option>
-                                        <option value="ods17">ODS 17 - Parcerias e Meios de Implementação</option>
-                                        <option value="nulo">Não Contempla Nenhum ODS</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="cadJustifica">Justificar a sua Importância da Abordagem a tal ODS e a Forma que será Contemplada no PIE</label>
-                                    <textarea class="form-control" name="cadJustifica" id="cadJustifica" rows="3" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadParceiro">Instituição Parceira</label>
-                                    <input type="text" class="form-control" name="cadParceiro" id="cadParceiro" placeholder="Local onde será Desenvolvido o PIE" required>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="cadImpacto">Quantas Pessoas o seu Projeto Pretende Impacta?</label>
-                                    <input type="text" class="form-control" name="cadImpacto" id="cadImpacto" placeholder="População que Participará Diretamente do Projeto" required>
-                                </div>
-                                <div class="col-md-7">
-                                    <label for="cadMentor">O seu Projeto terá um Mentor? Se sim, Citar quem será o Mentor</label>
-                                    <input type="text" class="form-control" name="cadMentor" id="cadMentor" placeholder="">
-                                </div>
-                                
+                    
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cadProj">Título do Projeto</label>
+                                <input type="text" class="form-control" name="cadProj" id="cadProj" placeholder="" required>
                             </div>
-                        </fieldset>                
-                    </form>
+                            <div class="col-md-6">
+                                <label for="cadTema">Tema Norteador</label>
+                                <input type="text" class="form-control" name="cadTema" id="cadTema" placeholder="" required>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="cadCategoria">Categoria do Projeto Integrador de Extensão</label>
+                                <select name="cadCategoria" id="cadCategoria" required>
+                                    <option style="display:none"></option>
+                                    <option value="">Projeto de Empreendedorismo ou Inovação Tecnológica</option>
+                                    <option value="">Projeto de Pesquisa Integrada à Extensão</option>
+                                    <option value="">Projeto Integrador de Extensão e Comunidade</option>
+                                    <option value="">Projeto Integrador de Extensão e Mercado</option>
+                                </select>
+                            </div>
+                            <div class="col-md-7">
+                                <label for="cadOds">Objetivos do Desenvolvimento Sustentável (ODS) Abordado pelo PIE</label>
+                                <select name="cadOds" id="cadOds" multiple required>
+                                    <option style="display:none"></option>
+                                    <option value="ods1">ODS 1 - Erradicação da Pobreza</option>
+                                    <option value="ods2">ODS 2 - Fome Zero e Agricultura Sustentável</option>
+                                    <option value="ods3">ODS 3 - Saúde e Bem-estar</option>
+                                    <option value="ods4">ODS 4 - Educação de Qualidade</option>
+                                    <option value="ods5">ODS 5 - Igualdade de Gênero</option>
+                                    <option value="ods6">ODS 6 - Água Potável e Saneamento</option>
+                                    <option value="ods7">ODS 7 - Energia Limpa e Acessível</option>
+                                    <option value="ods8">ODS 8 - Trabalho Decente e Crescimento Econômico</option>
+                                    <option value="ods9">ODS 9 - Indústria, Inovação e Infraestrutura</option>
+                                    <option value="ods10">ODS 10 - Redução das Desigualdades</option>
+                                    <option value="ods11">ODS 11 - Cidades e Comunidades Sustentáveis</option>
+                                    <option value="ods12">ODS 12 - Consumo e Produção Responsáveis</option>
+                                    <option value="ods13">ODS 13 - Ação Contra a Mudança Global do Clima</option>
+                                    <option value="ods14">ODS 14 - Vida na Água</option>
+                                    <option value="ods15">ODS 15 - Vida Terrestre</option>
+                                    <option value="ods16">ODS 16 - Paz, Justiça e Instituições Eficazes</option>
+                                    <option value="ods17">ODS 17 - Parcerias e Meios de Implementação</option>
+                                    <option value="nulo">Não Contempla Nenhum ODS</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="cadJustifica">Justificar a sua Importância da Abordagem a tal ODS e a Forma que será Contemplada no PIE</label>
+                                <textarea class="form-control" name="cadJustifica" id="cadJustifica" rows="3" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadParceiro">Instituição Parceira</label>
+                                <input type="text" class="form-control" name="cadParceiro" id="cadParceiro" placeholder="Local onde será Desenvolvido o PIE" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="cadImpacto">Quantas Pessoas o seu Projeto Pretende Impacta?</label>
+                                <input type="text" class="form-control" name="cadImpacto" id="cadImpacto" placeholder="População que Participará Diretamente do Projeto" required>
+                            </div>
+                            <div class="col-md-7">
+                                <label for="cadMentor">O seu Projeto terá um Mentor? Se sim, Citar quem será o Mentor</label>
+                                <input type="text" class="form-control" name="cadMentor" id="cadMentor" placeholder="">
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn-next text-center collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    style="margin-top: 25px;">
+                                    Próximo
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </fieldset>                
+                    
                 </div>
             </div>
             <!-- Terceiro card da barra-->
@@ -245,49 +261,49 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     
-                    <form class="row g-3 text-start form-container">
-                        <fieldset class="form-group">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="cadIntro">Introdução</label>
-                                    <textarea class="form-control" name="cadIntro" id="cadIntro" placeholder="Apresentação, Fundamentação Teória, no Último Parágrafo Descrever o Objetivo do Trabalho" rows="5" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadDemanda">Descrição da Demanda</label>
-                                    <textarea class="form-control" name="cadDemanda" id="cadDemanda" placeholder="Descrição do Problema que seu Projeto visa Solucionar" rows="5" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadSolucao">Descrição da Solução</label>
-                                    <textarea class="form-control" name="cadSolucao" id="cadSolucao" placeholder="Escopo da Solução Proposta, Descrevendo as Etapas, Objetivos e Justificativa" rows="5" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadResultado">Métricas e Resultados Esperados</label>
-                                    <textarea class="form-control" name="cadResultado" id="cadResultado" placeholder="Formas de Avaliar os Resultados/Impactos do Projeto" rows="5" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadCronograma">Cronograma</label>
-                                    <textarea class="form-control" name="cadCronograma" id="cadCronograma" placeholder="Data e Atividade" rows="5" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="cadRef">Referências</label>
-                                    <textarea class="form-control" name="cadRef" id="cadRef" rows="5" required></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="agdFoto">Foto do Projeto</label>
-                                    <input type="file" class="form-control" name="agdFoto" id="agdFoto" placeholder="" accept="image/*, .pdf">
-                                </div>
-                                
-                                
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cadIntro">Introdução</label>
+                                <textarea class="form-control" name="cadIntro" id="cadIntro" placeholder="Apresentação, Fundamentação Teória, no Último Parágrafo Descrever o Objetivo do Trabalho" rows="5" required></textarea>
                             </div>
-                        </fieldset>
-                        <div class="d-grid gap-2 col-12 mx-auto">
-                            <button type="submit" class="btn-block btn-form">Enviar</button>
-                        </div>               
-                    </form>            
+                            <div class="col-md-6">
+                                <label for="cadDemanda">Descrição da Demanda</label>
+                                <textarea class="form-control" name="cadDemanda" id="cadDemanda" placeholder="Descrição do Problema que seu Projeto visa Solucionar" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadSolucao">Descrição da Solução</label>
+                                <textarea class="form-control" name="cadSolucao" id="cadSolucao" placeholder="Escopo da Solução Proposta, Descrevendo as Etapas, Objetivos e Justificativa" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadResultado">Métricas e Resultados Esperados</label>
+                                <textarea class="form-control" name="cadResultado" id="cadResultado" placeholder="Formas de Avaliar os Resultados/Impactos do Projeto" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadCronograma">Cronograma</label>
+                                <textarea class="form-control" name="cadCronograma" id="cadCronograma" placeholder="Data e Atividade" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadRef">Referências</label>
+                                <textarea class="form-control" name="cadRef" id="cadRef" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="agdFoto">Foto do Projeto</label>
+                                <sub> (Opcional)</sub>
+                                <input type="file" class="form-control" name="agdFoto" id="agdFoto" placeholder="" accept="image/*, .pdf">
+                            </div>
+                            
+                            
+                        </div>
+                    </fieldset>
+
                 </div>                
             </div>            
             </div>
-        
+            <!-- Confirmação e envio do formulario-->
+            <div class="d-grid gap-2 col-12 mx-auto">
+                <button type="submit" class="btn-block btn-form">Enviar</button>
+            </div> 
         </form>
     </div>
 
@@ -297,24 +313,26 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
 
     <script>
-        const stepButtons = document.querySelectorAll('.step-button');
+        //Funcionamento da barra de progresso ao clicar em próximo
+        const stepButtons = document.querySelectorAll('.step-button, .btn-next');
         const progress = document.querySelector('#progress');
         
         Array.from(stepButtons).forEach((button,index) => {
             button.addEventListener('click', () => {
-                progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//there are 3 buttons. 2 spaces.
+                progress.setAttribute('value', (index-2) * 100 /(3 - 1) );//there are 3 buttons. 2 spaces.
         
                 stepButtons.forEach((item, secindex)=>{
-                    if(index > secindex){
+                    if((index-2) > secindex){
                         item.classList.add('done');
                     }
-                    if(index < secindex){
+                    if((index-2) < secindex){
                         item.classList.remove('done');
                     }
                 })
             })
         })
 
+        //funcionamento da seleção multipla para o campo das ods
         $( '#cadOds' ).select2( {
             theme: "bootstrap-5",
             width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'select',

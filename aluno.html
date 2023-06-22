@@ -25,231 +25,315 @@
 <body id="index">
     <!-- Barra Lataral/Menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <!-- Foto de Perfil do Aluno-->
         <img src="images\pfp.jpeg" alt="Foto de Perfil" width="170" height="170" class="avatar">
+        <!-- Nome do Aluno-->
         <h3 class="w3-padding-64 w3-center"><b>Marcia</b></h3>
-        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PROJETOS</a>
+        <!-- Guias de Acesso-->
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button collor">PROJETOS</a>
         <a href="cadProj.html" onclick="w3_close()" class="w3-bar-item w3-button">INSCREVER PROJETOS</a>
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
     </nav>
-    <!-- Small Menu -->
-    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-        <span class="w3-left w3-padding"></span>
+    <!-- Small Menu/Para telas pequenas -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16" style="margin-bottom: 5000px;">
+        <!-- Nome do Aluno-->
+        <span class="w3-left w3-padding">Marcia</span>
         <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </header>
-    <!-- Small Menu Efeito -->
+    <!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-     <!-- Separarção entre menu lateral e conteudo -->
-    <div class="w3-main" style="margin-left:300px">
+    
+    <!-- Separarção entre menu lateral e conteudo -->
+    <div class="w3-main  w3-container w3-padding-16" style="margin-left:400px; margin-right:150px;">
+        <!-- Empurre o conteúdo para baixo em telas pequenas --> 
+        <div class="w3-hide-large" style="margin-top:83px"></div>
         <div class="form-container">
-            <img src="images\Logo.png" class="center" style="width:20%" alt="Logo">
-            <h2 class="text-center mb-4" style="color:#FFFFFF"><b>Projetos</b></h2>
-            <!-- First Photo Grid-->
-            <div class="w3-row-padding">
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <img src="images\example.png" alt="example" style="width:100%" class="w3-hover-opacity" data-bs-toggle="modal" data-bs-target="#p1">
-                    <div class="w3-container w3-white">
-                        <p><b>Produção de Projeto Integrador</b></p>
-                        <p>2023/1</p>
-                        <span class="badge badge-secondary">Em Análise</span>
-                        <!-- Modal -->
-                        <div class="modal fade" id="p1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="p1Label" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="p1Label">Produção de Projeto Integrador</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body background">
-                                        <div class="row">
-                                            <!-- Coluna Esquerda-->
-                                            <div class="col-md-6">
-                                                <h4><b>Curso</b></h4>
-                                                <p>Sistemas de Informação</p>
-                                                <h4><b>Período</b></h4>
-                                                <p>4º</p>
-                                                <h4><b>Componentes do Grupo</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Tema Norteador</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Categoria do PIE</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Mentor</b></h4>
-                                                <h4><b>Introdução</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
-                                                    sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
-                                                    ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                                <h4><b>Descrição da Demanda</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                                <h4><b>Cronograma</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                            </div>
+        <!-- Logo Unisales -->
+        <img src="images\Logo.png" class="center" style="width:30%" alt="Logo">
+        <h2 class="text-center mb-4" style="color:#FFFFFF"><b>Projetos</b></h2>
+        <!-- Primeira coluna de projetos-->
+        <div class="w3-row-padding">
+            <!-- Primeiro projeto -->
+            <div class="w3-third w3-container w3-margin-bottom">
+                <!-- Foto do projeto caso aluno tenha anexado, caso não imagem generica-->
+                <img src="images\example.png" alt="example" style="width:100%" class="w3-hover-opacity" data-bs-toggle="modal" data-bs-target="#p1">
+                <div class="w3-container w3-white">
+                    <!-- titulo do projeto -->
+                    <p><b>Produção de Projeto Integrador</b></p>
+                    <!-- ano e periodo do projeto-->
+                    <p>2023/1</p>
+                    <!-- status do projeto -->
+                    <span class="badge bg-warning">Em Análise</span>
+                    <!-- Modal para ver detalhes -->
+                    <div class="modal fade" id="p1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="p1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <!-- header com o nome do pie e botão para fechar -->
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="p1Label">Produção de Projeto Integrador</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body background">
+                                    <div class="row">
+                                        <!-- Coluna Esquerda-->
+                                        <div class="col-md-6">
+                                            <h4><b>Curso</b></h4>
+                                            <p>Sistemas de Informação</p>
 
-                                            <!-- Coluna Direita-->
-                                            <div class="col-md-6">
-                                                <h4><b>Modalidade/Turno</b></h4>
-                                                <p>EAD</p>
-                                                <h4><b>Professor</b></h4>
-                                                <p>Castro Marcos</p>
-                                                <h4><b>Ano/Semestre</b></h4>
-                                                <p>2023/1</p>
-                                                <h4><b>ODS Abordados</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Justificativa da ODS</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Status</b></h4>
-                                                <span class="badge badge-secondary">Em Análise</span>
-                                                <h4><b>Métricas e Resultados Esperados</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Referências</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                            </div>
+                                            <h4><b>Período</b></h4>
+                                            <p>4º</p>
+
+                                            <h4><b>Componentes do Grupo</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Tema Norteador</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            
+                                            <h4><b>Categoria do PIE</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <!-- Inserção de mentor caso tenha -->
+                                            <h4><b>Mentor</b></h4>
+                                            <p></p>
+                                            
+                                            <h4><b>Introdução</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
+                                                sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
+                                                ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                                            </p>
+                                            
+                                            <h4><b>Descrição da Demanda</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+
+                                            <h4><b>Cronograma</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="cadProj.html" type="button" class="btn btn-secondary">Editar</a>
+
+                                        <!-- Coluna Direita-->
+                                        <div class="col-md-6">
+                                            <h4><b>Modalidade/Turno</b></h4>
+                                            <p>EAD</p>
+
+                                            <h4><b>Professor</b></h4>
+                                            <p>Castro Marcos</p>
+
+                                            <h4><b>Ano/Semestre</b></h4>
+                                            <p>2023/1</p>
+
+                                            <h4><b>ODS Abordados</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Justificativa da ODS</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            
+                                            <h4><b>Status</b></h4>
+                                            <span class="badge bg-warning">Em Análise</span>
+
+                                            <h4><b>Métricas e Resultados Esperados</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                                            <h4><b>Referências</b></h4>
+
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <img src="images\example.png" alt="example" style="width:100%" class="w3-hover-opacity" data-bs-toggle="modal" data-bs-target="#p2">
-                    <div class="w3-container w3-white">
-                        <p><b>Título Projeto</b></p>
-                        <p>2022/2</p>
-                        <span class="badge badge-success">Aprovado</span>
-                        <!-- Modal -->
-                        <div class="modal fade" id="p2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="p2Label" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="p2Label">Título Projeto</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body background">
-                                        <div class="row">
-                                            <!-- Coluna Esquerda-->
-                                            <div class="col-md-6">
-                                                <h4><b>Curso</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Período</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Componentes do Grupo</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Tema Norteador</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Categoria do PIE</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Mentor</b></h4>
-                                                <h4><b>Introdução</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
-                                                    sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
-                                                    ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                                <h4><b>Descrição da Demanda</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                                <h4><b>Cronograma</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                            </div>
-
-                                            <!-- Coluna Direita-->
-                                            <div class="col-md-6">
-                                                <h4><b>Modalidade/Turno</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Professor</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Ano/Semestre</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>ODS Abordados</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Justificativa da ODS</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Status</b></h4>
-                                                <span class="badge badge-success">Aprovado</span>
-                                                <h4><b>Métricas e Resultados Esperados</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Referências</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="cadProj.html" type="button" class="btn btn-secondary">Editar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3-third w3-container">
-                    <img src="images\example.png" alt="example" style="width:100%" class="w3-hover-opacity" data-bs-toggle="modal" data-bs-target="#p3">
-                    <div class="w3-container w3-white">
-                        <p><b>Xxxxx Xxxxx</b></p>
-                        <p>20xx/x</p>
-                        <span class="badge badge-danger">Pendente</span>
-                        <!-- Modal -->
-                        <div class="modal fade" id="p3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="p3Label" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="p3Label">Xxxxx Xxxxx</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body background">
-                                        <div class="row">
-                                            <!-- Coluna Esquerda-->
-                                            <div class="col-md-6">
-                                                <h4><b>Curso</b></h4>
-                                                <p>XXXXXXXXXXX</p>
-                                                <h4><b>Período</b></h4>
-                                                <p>4º</p>
-                                                <h4><b>Componentes do Grupo</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Tema Norteador</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Categoria do PIE</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Mentor</b></h4>
-                                                <h4><b>Introdução</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
-                                                    sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
-                                                    ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                                <h4><b>Descrição da Demanda</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                                <h4><b>Cronograma</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                            </div>
-
-                                            <!-- Coluna Direita-->
-                                            <div class="col-md-6">
-                                                <h4><b>Modalidade/Turno</b></h4>
-                                                <p>EAD</p>
-                                                <h4><b>Professor</b></h4>
-                                                <p>Castro Marcos</p>
-                                                <h4><b>Ano/Semestre</b></h4>
-                                                <p>2023/1</p>
-                                                <h4><b>ODS Abordados</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Justificativa da ODS</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Status</b></h4>
-                                                <span class="badge badge-secondary">Em Análise</span>
-                                                <h4><b>Métricas e Resultados Esperados</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
-                                                <h4><b>Referências</b></h4>
-                                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="cadProj.html" type="button" class="btn btn-secondary">Editar</a>
-                                    </div>
+                                <!-- botão para editar informações do projeto -->
+                                <div class="modal-footer">
+                                    <a href="cadProj.html" type="button" class="btn btn-secondary">Editar</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Segundo projeto -->
+            <div class="w3-third w3-container w3-margin-bottom">
+                <!-- Foto do projeto caso aluno tenha anexado, caso não imagem generica-->
+                <img src="images\example.png" alt="example" style="width:100%" class="w3-hover-opacity" data-bs-toggle="modal" data-bs-target="#p2">
+                <div class="w3-container w3-white">
+                    <!-- titulo do projeto -->
+                    <p><b>Título Projeto</b></p>
+                    <!-- ano e periodo do projeto-->
+                    <p>2022/2</p>
+                    <!-- status do projeto -->
+                    <span class="badge bg-success">Aprovado</span>
+                    <!-- Modal para ver detalhes -->
+                    <div class="modal fade" id="p2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="p2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <!-- header com o nome do pie e botão para fechar -->
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="p2Label">Título Projeto</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body background">
+                                    <div class="row">
+                                        <!-- Coluna Esquerda-->
+                                        <div class="col-md-6">
+                                            <h4><b>Curso</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Período</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Componentes do Grupo</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Tema Norteador</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Categoria do PIE</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <!-- Inserção de mentor caso tenha -->
+                                            <h4><b>Mentor</b></h4>
+                                            <p></p>
+
+                                            <h4><b>Introdução</b></h4>
+
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
+                                                sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
+                                                ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                                            </p>
+                                            
+                                            <h4><b>Descrição da Demanda</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+
+                                            <h4><b>Cronograma</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                                        </div>
+
+                                        <!-- Coluna Direita-->
+                                        <div class="col-md-6">
+                                            <h4><b>Modalidade/Turno</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Professor</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Ano/Semestre</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>ODS Abordados</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Justificativa da ODS</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Status</b></h4>
+                                            <span class="badge badge-success">Aprovado</span>
+
+                                            <h4><b>Métricas e Resultados Esperados</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Referências</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- botão para editar informações do projeto -->
+                                <div class="modal-footer">
+                                    <a href="cadProj.html" type="button" class="btn btn-secondary">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- terceiro projeto -->
+            <div class="w3-third w3-container w3-margin-bottom">
+                <!-- Foto do projeto caso aluno tenha anexado, caso não imagem generica-->
+                <img src="images\example.png" alt="example" style="width:100%" class="w3-hover-opacity" data-bs-toggle="modal" data-bs-target="#p3">
+                <div class="w3-container w3-white">
+                    <!-- titulo do projeto -->
+                    <p><b>Xxxxx Xxxxx</b></p>
+                    <!-- ano e periodo do projeto-->
+                    <p>20xx/x</p>
+                    <!-- status do projeto -->
+                    <span class="badge bg-danger">Pendente</span>
+                    <!-- Modal para ver detalhes -->
+                    <div class="modal fade" id="p3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="p3Label" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <!-- header com o nome do pie e botão para fechar -->
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="p3Label">Xxxxx Xxxxx</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body background">
+                                    <div class="row">
+                                        <!-- Coluna Esquerda-->
+                                        <div class="col-md-6">
+                                            <h4><b>Curso</b></h4>
+                                            <p>XXXXXXXXXXX</p>
+
+                                            <h4><b>Período</b></h4>
+                                            <p>4º</p>
+
+                                            <h4><b>Componentes do Grupo</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Tema Norteador</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Categoria do PIE</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            
+                                            <!-- Inserção de mentor caso tenha -->
+                                            <h4><b>Mentor</b></h4>
+                                            <p></p>
+
+                                            <h4><b>Introdução</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
+                                                sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
+                                                ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                                            </p>
+                                            
+                                            <h4><b>Descrição da Demanda</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+
+                                            <h4><b>Cronograma</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                                        </div>
+
+                                        <!-- Coluna Direita-->
+                                        <div class="col-md-6">
+                                            <h4><b>Modalidade/Turno</b></h4>
+                                            <p>EAD</p>
+
+                                            <h4><b>Professor</b></h4>
+                                            <p>Castro Marcos</p>
+
+                                            <h4><b>Ano/Semestre</b></h4>
+                                            <p>2023/1</p>
+
+                                            <h4><b>ODS Abordados</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Justificativa da ODS</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Status</b></h4>
+                                            <span class="badge badge-secondary">Em Análise</span>
+
+                                            <h4><b>Métricas e Resultados Esperados</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+
+                                            <h4><b>Referências</b></h4>
+                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- botão para editar informações do projeto -->
+                                <div class="modal-footer">
+                                    <a href="cadProj.html" type="button" class="btn btn-secondary">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
     </div>
