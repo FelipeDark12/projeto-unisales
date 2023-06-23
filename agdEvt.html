@@ -64,6 +64,7 @@
                         1
                     </button>
                     <div class="step-title">
+                        1ª Etapa
                         <!-- -->
                     </div>
                 </div>
@@ -73,6 +74,7 @@
                         2
                     </button>
                     <div class="step-title">
+                        2ª Etapa
                         <!-- -->
                     </div>
                 </div>                
@@ -94,7 +96,7 @@
 
                                 <div class="col-md-3">
                                     <label for="agdTelefone">Telefone</label>
-                                    <input type="tel" class="form-control phone_with_ddd" name="agdTelefone" id="agdTelefone"  required>                    
+                                    <input type="tel" class="form-control" name="agdTelefone" id="agdTelefone"  required>                    
                                 </div>
                                 
                                 <div class="col-md-5">
@@ -122,8 +124,130 @@
                                         <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
                                     </select>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <label for="agdEvento">Título do Evento</label>
+                                    <input type="text" class="form-control" name="agdEvento" id="agdEvento" placeholder="" required>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="agd_dtInicio">Data de Início</label>
+                                    <input type="date" name="agd_dtInicio" id="agd_dtInicio" placeholder="dd/mm/aaaa" required>                    
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="agd_dtFim">Data de Término</label>
+                                    <input type="date" name="agd_dtFim" id="agd_dtFim" required>                    
+                                </div>
+
+                                <div class="col-md-2 d-flex ps-4">
+                                    <div class="row d-flex justify-content-left align-items-left align-self-left">
+                                        <legend class="col-form-label col p-0 ps-0">Modalidade</legend>                                        
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="agdModalidade" id="agdModalidade1" value="1" checked>
+                                                <label class="form-check-label" for="agdModalidade1">
+                                                    Presencial
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="agdModalidade" id="agdModalidade2" value="0">
+                                                <label class="form-check-label" for="agdModalidade2">
+                                                    Online
+                                                </label>
+                                            </div>                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="agdLocal">Local</label>
+                                    <input type="text" class="form-control" name="agdLocal" id="agdLocal" placeholder="Reserva do Local é Responsabilidade do Solicitante" required>
+                                    <!--<p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>-->
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="agd_hInicio">Hora de Início</label>
+                                    <input type="time" class="form-control" name="agd_hInicio" id="agd_hInicio" placeholder="" required>
+                                </div>
+    
+                                <div class="col-md-2">
+                                    <label for="agd_hFim">Hora de Término</label>
+                                    <input type="time" class="form-control" name="agd_hFim" id="agd_hFim" placeholder="" required>
+                                </div>
+
+                                <div class="col-md-7">
+                                    <label for="agdRecursos">Se Presencial, precisará de quais Recursos?</label>
+                                    <select name="agdRecursos" id="agdRecursos" multiple required>
+                                        <option style="display:none"></option>
+                                        <option value="agdr1">Água</option>
+                                        <option value="agdr2">Microfone</option>
+                                        <option value="agdr3">Datashow</option>
+                                        <option value="agdr4">Computador</option>
+                                        <option value="agdr5">Caixa de Som</option>                                        
+                                    </select>
+                                </div>
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                <div class="col-md-4">
+                                    <button class="btn-next text-center collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                        style="margin-top: 70px;">
+                                        Próximo
+                                    </button>
+                                </div>
                             </div>
                         </fieldset>                        
+                    
+                </div>
+            </div>
+            <!-- Segundo card da barra-->
+            <div class="card" style="background-color: transparent; border: none;">
+                <div  id="headingTwo">
+            
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="agdPublico">Público Alvo</label>
+                                <select name="agdPublico" id="agdPublico" required>
+                                    <option style="display:none"></option>
+                                    <option value="geral">Acadêmicos de Todos os Cursos</option>
+                                    <option value="docentes">Docentes</option>
+                                    <option value="administrativo">Técnico Administrativo</option>
+                                    <option value="externo">Comunidade Externa</option>
+                                    <option value="restrito">Acadêmicos do Curso Solicitate</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-5">
+                                <label for="agdComplemento">Complemento Público Alvo</label>
+                                <input type="text" class="form-control" name="agdComplemento" id="agdComplemento" placeholder="Caso Precise Complementar o Público Alvo">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="agdLimite">Limite de Inscrições</label>
+                                <input type="number" class="form-control" name="agdLimite" id="agdLimite" placeholder="Verificar Capacidade da Sala" min="1" max="1000" required>
+                                <!--<p><sup>Verificar a Capacidade da Sala Reservada</sup></p>-->
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="agdValor">Valor da Inscrição</label>
+                                <input type="number" class="form-control" name="agdValor" id="agdValor" placeholder="0 Caso Gratuita" min="0" max="100" required>
+                                <!--<p><sup>0 Caso Gratuita</sup></p>-->
+                            </div>
+
+                            
+                            
+                        </div>
+                    </fieldset>                
                     
                 </div>
             </div>
@@ -137,35 +261,23 @@
                         </div>
 
                     <div class="form-group">
-                        <label for="agdEvento">Título do Evento</label>
-                        <input type="text" class="form-control" name="agdEvento" id="agdEvento" placeholder="" required>
+                        
                     </div>  
 
                     <div class="form-group">
-                        <label for="agd_dtInicio">Data de Início</label>
-                        <input type="date" name="agd_dtInicio" id="agd_dtInicio" required>
+                        
                     </div>
 
                     <div class="form-group">
-                        <label for="agd_dtFim">Data de Término</label>
-                        <input type="date" name="agd_dtFim" id="agd_dtFim" required>
+                        
                     </div>
 
                     <div class="form-group">
-                        <label for="agdPublico">Público Alvo</label>
-                        <select name="agdPublico" id="agdPublico" required>
-                            <option style="display:none"></option>
-                            <option value="geral">Acadêmicos de Todos os Cursos</option>
-                            <option value="docentes">Docentes</option>
-                            <option value="administrativo">Técnico Administrativo</option>
-                            <option value="externo">Comunidade Externa</option>
-                            <option value="restrito">Acadêmicos do Curso Solicitate</option>
-                        </select>
+                        
                     </div>
 
                     <div class="form-group">
-                        <label for="agdComplemento">Complemento Público Alvo</label>
-                        <input type="text" class="form-control" name="agdComplemento" id="agdComplemento" placeholder="Caso Precise Complementar o Público Alvo">
+                        
                     </div>
 
                     <div class="form-group">
@@ -226,39 +338,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="agdCurso">Curso</label>
-                        <select name="agdCurso" id="agdCurso" required>
-                            <option style="display:none"></option>
-                            <option value="administracao">Administração</option>
-                            <option value="arquitetura">Arquitetura e Urbanismo</option>
-                            <option value="biomedicina">Biomedicina</option>
-                            <option value="biologicas">Ciências Biológicas</option>
-                            <option value="contabeis">Ciências Contábeis</option>
-                            <option value="direito">Direito</option>
-                            <option value="edfisica">Educação Física</option>
-                            <option value="enfermagem">Enfermagem</option>
-                            <option value="engcivil">Engenharia Civil</option>
-                            <option value="engproducao">Engenharia de Produção</option>
-                            <option value="engsoftware">Engenharia de Software</option>
-                            <option value="farmacia">Farmácia</option>
-                            <option value="filosofia">Filosofia</option>
-                            <option value="fisioterapia">Fisioterapia</option>
-                            <option value="nutricao">Nutrição</option>
-                            <option value="psicologia">Psicologia</option>
-                            <option value="si">Sistemas de Informação</option>
-                            <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
-                        </select>
+                        
                     </div>
                     
                     <div class="form-group">
-                        <label for="agd_hInicio">Horário de Início</label>
-                        <input type="time" class="form-control" name="agd_hInicio" id="agd_hInicio" placeholder="" required>
+                        
                         
                     </div>  
 
                     <div class="form-group">
-                        <label for="agd_hFim">Horário de Término</label>
-                        <input type="time" class="form-control" name="agd_hFim" id="agd_hFim" placeholder="" required>
+                        
                     </div>  
 
                     <div class="form-group">
@@ -271,9 +360,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="agdLocal">Local</label>
-                        <input type="text" class="form-control" name="agdLocal" id="agdLocal" placeholder="Reserva do Local é Responsabilidade do Solicitante" required>
-                        <!--<p><sup>(Reserva do local é responsabilidade do solicitante)</sup></p>-->
+                        
                     </div>  
 
                     <div class="form-group">
@@ -304,15 +391,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="agdLimite">Limite de Inscrições</label>
-                        <input type="number" class="form-control" name="agdLimite" id="agdLimite" placeholder="Verificar a Capacidade da Sala Reservada" min="1" max="100" required>
-                        <!--<p><sup>Verificar a Capacidade da Sala Reservada</sup></p>-->
+                        
                     </div>
 
                     <div class="form-group">
-                        <label for="agdValor">Valor da Inscrição</label>
-                        <input type="number" class="form-control" name="agdValor" id="agdValor" placeholder="0 Caso Gratuita" min="0" max="100" required>
-                        <!--<p><sup>0 Caso Gratuita</sup></p>-->
+                        
                     </div>
 
                     <div class="form-group">
@@ -328,20 +411,46 @@
     </div>
     <script src="scripts/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstarp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" 
-        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" 
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function(){
+    <script>
+        //Funcionamento da barra de progresso ao clicar em próximo
+        const stepButtons = document.querySelectorAll('.step-button, .btn-next');
+        const progress = document.querySelector('#progress');
         
-        $('input[name="agdTelefone"]').mask('(00) 00000-0000');
+        Array.from(stepButtons).forEach((button,index) => {
+            button.addEventListener('click', () => {
+                progress.setAttribute('value', (index-1) * 100 /(2 - 1) );//there are 3 buttons. 2 spaces.
         
-    });
+                stepButtons.forEach((item, secindex)=>{
+                    if((index-1) > secindex){
+                        item.classList.add('done');
+                    }
+                    if((index-1) < secindex){
+                        item.classList.remove('done');
+                    }
+                })
+            })
+        })
+
+        //Mascara para telefone
+        $(document).ready(function(){
+            
+            $('input[name="agdTelefone"]').mask('(00) 0000-00009');
+            
+            
+        });
+
+        //funcionamento da seleção multipla para o campo das ods
+        $( '#agdRecursos' ).select2( {
+            theme: "bootstrap-5",
+            width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'select',
+            placeholder: $( this ).data( 'placeholder' ),
+            closeOnSelect: false,
+            
+        } );
     </script>
 </body>
 </html>
