@@ -1,16 +1,3 @@
-// Script checkbox
-var expanded = false;
-
-function showCheckboxes() {
-  var checkboxes = document.getElementById("checkboxes");
-  if (!expanded) {
-    checkboxes.style.display = "block";
-    expanded = true;
-  } else {
-    checkboxes.style.display = "none";
-    expanded = false;
-  }
-}
 
 // Script to open and close sidebar
 function w3_open() {
@@ -38,4 +25,36 @@ $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
+// Script para egresso
+function yesnoCheck() {
+  if (document.getElementById('inlineRadio1').checked) {
+      document.getElementById('ifYes').style.display = 'block';
+      document.getElementById('ifNo').style.display = 'none';
+  }
+  else {
+      document.getElementById('ifYes').style.display = 'none';
+      document.getElementById('ifNo').style.display = 'block';
+  }
+       
 
+}
+
+function envio1() {
+  if (document.getElementById('0').click){
+      document.getElementById('ifYes').style.display = 'block';
+  }
+  else {
+    document.getElementById('ifYes').style.display = 'none';
+  }
+}
+
+function envio2() {
+  if (document.getElementById('1').click){
+      document.getElementById('Sim').style.display = 'block';
+  }
+  else {
+    document.getElementById('Sim').style.display = 'none';
+  }
+}
+
+//

@@ -165,11 +165,11 @@
                                     <label for="cadGrupo">Componentes do Grupo</label>
                                     <textarea class="form-control" name="cadGrupo" id="cadGrupo" placeholder="Nome Completo de Todos os Integrantes" rows="3" required></textarea>
                                 </div>
-
-                                <div class="col-md-4">
+                                
+                                <div class="d-grid gap-2 col-12 mx-auto">
                                     <button class="btn-next text-center collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                                        style="margin-top: 70px;">
+                                        >
                                         Próximo
                                     </button>
                                 </div>
@@ -243,14 +243,16 @@
                                 <label for="cadImpacto">Quantas Pessoas o seu Projeto Pretende Impacta?</label>
                                 <input type="text" class="form-control" name="cadImpacto" id="cadImpacto" placeholder="População que Participará Diretamente do Projeto" required>
                             </div>
+
                             <div class="col-md-7">
                                 <label for="cadMentor">O seu Projeto terá um Mentor? Se sim, Citar quem será o Mentor</label>
                                 <input type="text" class="form-control" name="cadMentor" id="cadMentor" placeholder="">
                             </div>
-                            <div class="col-md-3">
+
+                            <div class="d-grid gap-2 col-12 mx-auto">
                                 <button class="btn-next text-center collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                                    style="margin-top: 25px;">
+                                     id="0" onclick="javascript:envio1();">
                                     Próximo
                                 </button>
                             </div>
@@ -305,16 +307,23 @@
                 </div>                
             </div>            
             </div>
-            <!-- Confirmação e envio do formulario-->
-            <div class="d-grid gap-2 col-12 mx-auto">
-                <button type="submit" class="btn-block btn-form">Enviar</button>
-            </div>
+            <fieldset class="form-group pt-2" id="ifYes" style="display:none">
+                <div class="row">
+                    <!-- Confirmação e envio do formulario-->
+                    <div class="d-grid gap-2 col-12 mx-auto">
+                        <button type="submit" class="btn-block btn-form">Enviar</button>
+                    </div>
+                    
+                </div>
+            </fieldset>
+            
         </form>
     </div>
 
     <script src="scripts/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Seleção multipla -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
 
     <script>

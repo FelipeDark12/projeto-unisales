@@ -211,6 +211,19 @@ textarea {
     box-sizing: border-box;
 }
 
+input[type=file],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 20px !important;
+    margin: 0px 0;
+    margin-bottom: 10px !important;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .multi{
     width: 100%;
     padding: 10px 20px;
@@ -339,4 +352,12 @@ form.pesquisa {
 #progress::-webkit-progress-bar {
     background-color: var(--prm-gray);
 
+}
+
+td.details-control {
+    background: url('../images/arrow_drop_down.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../images/arrow_right.png') no-repeat center center;
 }
