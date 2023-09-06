@@ -59,6 +59,17 @@ h5 {
     font-weight: bold;
 }
 
+.modal {
+    
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 30px;
+    font-family: "Nunito", sans-serif;
+    color: #000000;
+    font-weight: bold;
+}
+
 .background {
     background-color: #204f9c;
     color: #FFFFFF;
@@ -212,6 +223,19 @@ textarea {
 }
 
 input[type=file],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 20px !important;
+    margin: 0px 0;
+    margin-bottom: 10px !important;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email],
 select,
 textarea {
     width: 100%;

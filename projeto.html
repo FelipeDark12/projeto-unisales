@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!-- Cabeçalho e imports -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projeto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images\Icone.png">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- bootstrap 4
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body id="index">
+    <!-- Barra Lataral/Menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <!-- Foto de Perfil do Professor-->
+        <img src="images\prof.jpg" alt="Foto de Perfil" width="170" height="170" class="avatar">
+        <!-- Nome do Professor-->
+        <h3 class="w3-padding-64 w3-center"><b>Carlos</b></h3>
+        <!-- Guias de Acesso-->
+        <a href="professor.html" onclick="w3_close()" class="w3-bar-item w3-button collor">PROJETOS</a>
+        <a href="agdEvt.html" onclick="w3_close()" class="w3-bar-item w3-button">AGENDAR EVENTO</a>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">FECHAR</a>
+    </nav>
+    <!-- Small Menu/Para telas pequenas -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16" style="margin-bottom: 5000px;">
+        <!-- Nome do Aluno-->
+        <span class="w3-left w3-padding">Carlos</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+    <!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- Separarção entre menu lateral e conteudo -->
+    <div class="w3-main w3-container w3-padding-16" style="margin-left:400px; margin-right:100px;">
+        <!-- Empurre o conteúdo para baixo em telas pequenas --> 
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        <div class="form-container">
+            <!-- Logo Unisales -->
+            <img src="images\Logo.png" class="center" style="width:20%" alt="Logo">
+            <div class="">
+                <h2 class="col-md-6">Nome do Projeto</h2>
+                    
+                    <div class="row">
+                        <!-- Coluna Esquerda-->
+                        <div class="col-md-6">
+                            <h4><b>Curso</b></h4>
+                            <p>Sistemas de Informação</p>
+
+                            <h4><b>Período</b></h4>
+                            <p>4º</p>
+
+                            <h4><b>Componentes do Grupo</b></h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+
+                            <h4><b>Tema Norteador</b></h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            
+                            <h4><b>Categoria do PIE</b></h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+
+                            <!-- Inserção de mentor caso tenha -->
+                            <h4><b>Mentor</b></h4>
+                            <p></p>
+                            
+                            <h4><b>Introdução</b></h4>
+                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor
+                                sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem
+                                ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                            </p>
+                            
+                            <h4><b>Descrição da Demanda</b></h4>
+                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+
+                            <h4><b>Cronograma</b></h4>
+                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                        </div>
+
+                        <!-- Coluna Direita-->
+                        <div class="col-md-6">
+                            <h4><b>Modalidade/Turno</b></h4>
+                            <p>EAD</p>
+
+                            <h4><b>Professor</b></h4>
+                            <p>Castro Marcos</p>
+
+                            <h4><b>Ano/Semestre</b></h4>
+                            <p>2023/1</p>
+
+                            <h4><b>ODS Abordados</b></h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+
+                            <h4><b>Justificativa da ODS</b></h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            
+                            <h4><b>Status</b></h4>
+                            <span class="badge bg-warning">Em Análise</span>
+
+                            <h4><b>Métricas e Resultados Esperados</b></h4>
+                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                            <h4><b>Referências</b></h4>
+
+                            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    
+                    <!-- botão para editar informações do projeto -->
+                    <div class="modal-footer">
+                        <a href="cadProj.html" type="button" class="btn btn-secondary">Editar/Aprovar/Rejeitar</a>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Launch static backdrop modal
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            ...
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" onclick="confirma()" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+
+
+    <script src="scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

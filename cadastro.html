@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<!-- Cabeçalho e imports -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro Aluno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images\Icone.png">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- bootstrap 4
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body id="login">
+
+    <!-- inicio conteudo -->
+    <div class="w3-main row justify-content-center w3-container w3-padding-16">
+        <!-- Empurre o conteúdo para baixo em telas pequenas -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        <!-- Logo Unisales -->
+        <img src="images\Logo.png" style="width:25%" alt="Logo">
+        <!-- Container do Cadastro Aluno-->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+            <form>
+                <div class="form-login">
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cadAluno">Nome Completo</label>
+                                <input type="text" class="form-control" name="cadAluno" id="cadAluno" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cadRa">RA</label>
+                                <input type="text" class="form-control" name="cadRa" id="cadRa" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cadCurso">Curso</label>
+                                <select class="form-control form-select" name="cadCurso" id="cadCurso" required>
+                                    <option style="display:none"></option>
+                                    <option value="administracao">Administração</option>
+                                    <option value="arquitetura">Arquitetura e Urbanismo</option>
+                                    <option value="biomedicina">Biomedicina</option>
+                                    <option value="biologicas">Ciências Biológicas</option>
+                                    <option value="contabeis">Ciências Contábeis</option>
+                                    <option value="direito">Direito</option>
+                                    <option value="edFisicaB">Educação Física Bacharelado</option>
+                                    <option value="edFisicaL">Educação Física Licenciatura</option>
+                                    <option value="enfermagem">Enfermagem</option>
+                                    <option value="engCivil">Engenharia Civil</option>
+                                    <option value="engProducao">Engenharia de Produção</option>
+                                    <option value="engSoftware">Engenharia de Software</option>
+                                    <option value="farmacia">Farmácia</option>
+                                    <option value="filosofia">Filosofia</option>
+                                    <option value="fisioterapia">Fisioterapia</option>
+                                    <option value="nutricao">Nutrição</option>
+                                    <option value="psicologia">Psicologia</option>
+                                    <option value="si">Sistemas de Informação</option>
+                                    <option value="tads">Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+                                </select>
+                            </div>
+
+                            <!--
+                            <div class="col-md-6">
+                                <label for="cadModalidade">Modalidade/Turno</label>
+                                <select class="form-control form-select" name="cadModalidade" id="cadModalidade" required>
+                                    <option style="display:none"></option>
+                                    <option value="presencialmat">Presencial / Matutino</option>
+                                    <option value="presencialnot">Presencial / Noturno</option>
+                                    <option value="semipresencial">Semipresencial</option>
+                                    <option value="ead">EAD</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cadPeriodo">Período</label>
+                                <select class="form-control form-select" name="cadPeriodo" id="cadPeriodo" required>
+                                    <option style="display:none"></option>
+                                    <option value="1">1º Período</option>
+                                    <option value="2">2º Período</option>
+                                    <option value="3">3º Período</option>
+                                    <option value="4">4º Período</option>
+                                    <option value="5">5º Período</option>
+                                    <option value="6">6º Período</option>
+                                    <option value="7">7º Período</option>
+                                    <option value="8">8º Período</option>
+                                    <option value="9">9º Período</option>
+                                    <option value="10">10º Período</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cadEmail">E-mail</label>
+                                <input type="email" class="form-control" name="cadEmail" id="cadEmail" placeholder="" required>  
+                            </div>
+                            -->
+
+                            <div class="col-md-6">
+                                <label for="cadCpf">CPF</label>
+                                <input type="text" class="form-control" name="cadCpf" id="cadCpf" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cadSenha">Senha</label>
+                                <input type="password" class="form-control" name="cadSenha" id="cadSenha" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cadConfirmaSenha">Confirme sua Senha</label>
+                                <input type="password" class="form-control" name="cadConfirmaSenha" id="cadConfirmaSenha" placeholder="" required>
+                                <span id='message'></span>
+                            </div>
+                            
+                            <div class="d-grid gap-2 col-12 mx-auto">
+                                <button type="submit" class=" btn-block btn-submit">Cadastrar</button>
+                            </div>
+                                
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script>
+        // Check if passwords match
+        $('#cadSenha, #cadConfirmaSenha').on('keyup', function () {
+        if ($('#cadSenha').val() == $('#cadConfirmaSenha').val()) {
+            $('#message').html('Correspondendo').css('color', 'green');
+        } else 
+            $('#message').html('Não Corresponde').css('color', 'red');
+        });
+    </script>
+</body>
+
+</html>

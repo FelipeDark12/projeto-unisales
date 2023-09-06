@@ -57,4 +57,7 @@ function envio2() {
   }
 }
 
-//
+//envio
+function confirma() {
+  alert("Feito!");
+}
